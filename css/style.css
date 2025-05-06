@@ -1,92 +1,19 @@
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Global Styles */
-body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-header.navbar { @apply bg-white/80 backdrop-blur-lg shadow-md; }
-.nav-link {
-  @apply relative uppercase font-semibold px-3 py-2;
+/* Custom tweaks beyond Tailwind */
+.hero{
+  background-image:url('../Images/main.jpg');
+  background-size:cover;
+  background-position:center;
 }
-.nav-link::after {
-  content: '';
-  @apply absolute left-1/2 bottom-0 w-0 h-0.5 bg-blue-500 transition-all;
-}
-.nav-link:hover::after { @apply w-1/2 left-1/4; }
-
-/* Hero Banner */
-.hero {
-  background: url('../Images/main.jpg') center/cover no-repeat;
-  position: relative;
-}
-.hero::before {
-  @apply absolute inset-0 bg-gradient-to-b from-black/60 to-black/20;
-}
-.hero-content {
-  @apply relative z-10 flex flex-col items-center justify-center h-full text-center;
-  animation: fadeIn 1.5s ease-out forwards;
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-#typed-text { @apply text-cyan-300; }
-
-/* Section Titles */
-.section-title {
-  @apply text-5xl md:text-6xl font-extrabold text-center uppercase mb-12;
-  position: relative;
-}
-.section-title::after {
+.hero::after{
   content:'';
-  @apply block w-32 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto mt-4 rounded;
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55);
 }
-
-/* Highlights */
-.highlight-item {
-  @apply flex items-start gap-4 bg-white p-6 rounded-xl shadow-lg;
+.skill-card{
+  @apply flex flex-col items-center p-4 bg-white shadow-lg rounded-lg hover:-translate-y-1 transition;
 }
-.highlight-icon { @apply text-4xl text-blue-500 flex-shrink-0; }
-
-/* Timeline */
-.timeline { @apply relative border-l-4 border-blue-500 pl-10; }
-.timeline-item { @apply mb-12 relative;}
-.timeline-item::before {
-  content:'';
-  @apply absolute -left-2.5 w-5 h-5 bg-blue-500 rounded-full top-1;
+.pub-card{
+  @apply bg-white/80 backdrop-blur-md border border-slate-200 rounded-lg p-4 shadow-sm hover:shadow-lg transition;
 }
-
-/* Skills Grid */
-.skill-grid { @apply grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6; }
-.skill-card {
-  @apply p-6 bg-white rounded-xl shadow-lg text-center transform transition hover:-translate-y-2 hover:shadow-2xl;
-}
-.skill-card i { @apply text-5xl mb-3 text-blue-500; }
-
-/* Projects */
-.project-card {
-  @apply bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition;
-}
-
-/* Publications */
-.publication-item {
-  @apply flex items-start gap-4 bg-white p-4 rounded-xl shadow hover:bg-blue-50 transition;
-}
-.publication-icon { @apply text-2xl text-gray-500 flex-shrink-0; }
-
-/* Honors */
-.honor-item { @apply flex items-center gap-3 text-lg; }
-.honor-icon { @apply text-yellow-500 text-2xl; }
-
-/* Contact Buttons */
-.contact-btn {
-  @apply inline-flex items-center gap-2 px-6 py-3 rounded-full text-white font-semibold shadow-lg transition;
-}
-.contact-email { @apply bg-blue-600 hover:bg-blue-700; }
-.contact-linkedin { @apply bg-blue-500 hover:bg-blue-600; }
-.contact-github { @apply bg-gray-800 hover:bg-gray-900; }
-
-/* Toggle */
-.toggle-btn { @apply text-blue-500 hover:underline cursor-pointer mt-3 block; }
-.details { @apply mt-4 space-y-2 hidden; }
