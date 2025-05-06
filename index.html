@@ -23,6 +23,14 @@
       .clip-path-bottom {
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
       }
+      /* Custom scrollbar styling */
+      .scrollbar-thin::-webkit-scrollbar {
+        height: 6px;
+      }
+      .scrollbar-thin::-webkit-scrollbar-thumb {
+        background-color: rgba(107, 114, 128, 0.5);
+        border-radius: 3px;
+      }
     }
   </style>
 </head>
@@ -39,7 +47,9 @@
         />
         MJ Ahmadi
       </a>
-      <button id="menuBtn" class="md:hidden text-2xl"><i class="fa-solid fa-bars"></i></button>
+      <button id="menuBtn" class="md:hidden text-2xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
       <ul id="navList" class="hidden md:flex gap-6 text-sm">
         <li><a href="#about" class="hover:text-blue-700">About</a></li>
         <li><a href="#highlights" class="hover:text-blue-700">Highlights</a></li>
@@ -62,11 +72,13 @@
   <!-- Hero -->
   <section
     id="home"
-    class="relative hero min-h-screen flex items-center justify-center text-center clip-path-bottom"
-    style="background: url('https://mjahmadee.github.io/Images/main.jpg') center/cover no-repeat;"
+    class="relative hero min-h-screen flex items-center justify-center text-center clip-path-bottom bg-cover bg-center"
+    style="background-image:url('https://mjahmadee.github.io/Images/main.jpg')"
   >
     <div class="relative z-10 px-6 max-w-3xl text-white" data-aos="fade-up">
-      <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Mohammad Javad Ahmadi</h1>
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
+        Mohammad Javad Ahmadi
+      </h1>
       <p class="text-lg md:text-2xl mb-6">
         <span id="typed" class="text-cyan-300"></span>
       </p>
@@ -91,11 +103,15 @@
     <div class="max-w-screen-lg mx-auto px-6" data-aos="fade-right">
       <h2 class="text-3xl font-bold mb-6">About Me</h2>
       <p class="text-lg leading-relaxed">
-        Ph.D. candidate and AI engineer with 5+ years of experience developing deep-learning solutions
-        for surgical video analysis, computer vision, and robotics. CTO of
-        <a href="https://www.mediversai.com/" class="text-blue-700 underline">MediversAI</a> and head of
-        ARAS AI, VR & Software Group, I drive multi-disciplinary teams toward innovations that enhance surgical training
-        and patient safety.
+        Ph.D. candidate and AI engineer with 5+ years of experience developing
+        deep-learning solutions for surgical video analysis, computer vision,
+        and robotics. CTO of
+        <a href="https://www.mediversai.com/" class="text-blue-700 underline"
+          >MediversAI</a
+        >
+        and head of ARAS AI, VR & Software Group, I drive multi-disciplinary
+        teams toward innovations that enhance surgical training and patient
+        safety.
       </p>
     </div>
   </section>
@@ -103,11 +119,90 @@
   <!-- Career Highlights -->
   <section id="highlights" class="py-20 bg-gray-50">
     <div class="max-w-screen-lg mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-12 text-center uppercase tracking-wide" data-aos="zoom-in">
+      <h2
+        class="text-4xl font-bold mb-12 text-center uppercase tracking-wide"
+        data-aos="zoom-in"
+      >
         🌟 Career Highlights
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-        <!-- Cards as before... -->
+        <div
+          class="flex items-start bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition"
+          data-aos="fade-up"
+        >
+          <span class="text-3xl mr-4">🚀</span>
+          <p class="text-lg">
+            <span class="font-semibold"
+              >Head of
+              <a
+                href="https://aras.kntu.ac.ir/ai"
+                style="color: inherit; text-decoration: underline;"
+                >ARAS AI, VR & Software Group</a
+              ></span
+            >, advancing surgical education and medical image diagnosis.
+          </p>
+        </div>
+        <div
+          class="flex items-start bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <span class="text-3xl mr-4">💼</span>
+          <p class="text-lg">
+            <span class="font-semibold"
+              >Chief Technology Officer at
+              <a
+                href="https://www.mediversai.com/"
+                style="color: inherit; text-decoration: underline;"
+                >MediversAI</a
+              ></span
+            >, leading AI development and end-to-end software solutions.
+          </p>
+        </div>
+        <div
+          class="flex items-start bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <span class="text-3xl mr-4">📈</span>
+          <p class="text-lg">
+            <span class="font-semibold">AI & Data Engineer</span> with over 5
+            years deploying deep-learning pipelines in production.
+          </p>
+        </div>
+        <div
+          class="flex items-start bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <span class="text-3xl mr-4">🔍</span>
+          <p class="text-lg">
+            <span class="font-semibold">Computer Vision & Data Analysis Expert</span>
+            with extensive research track record.
+          </p>
+        </div>
+        <div
+          class="flex items-start bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          <span class="text-3xl mr-4">🤝</span>
+          <p class="text-lg">
+            Led technical client engagements, presenting AI products and
+            exploratory data analysis results.
+          </p>
+        </div>
+        <div
+          class="flex items-start bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition"
+          data-aos="fade-up"
+          data-aos-delay="500"
+        >
+          <span class="text-3xl mr-4">🎓</span>
+          <p class="text-lg">
+            Mentor to AI developers for 4+ years, teaching Python, ML, DL, CV,
+            and AI in Robotics.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -115,11 +210,133 @@
   <!-- Education -->
   <section id="education" class="py-20 bg-white">
     <div class="max-w-screen-lg mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-12 text-center uppercase tracking-wide" data-aos="zoom-in">
+      <h2
+        class="text-4xl font-bold mb-12 text-center uppercase tracking-wide"
+        data-aos="zoom-in"
+      >
         🎓 Education
       </h2>
       <div class="space-y-12">
-        <!-- Education entries as before... -->
+        <!-- Ph.D. -->
+        <div
+          class="bg-gray-50 shadow-lg rounded-2xl p-8"
+          data-aos="fade-left"
+        >
+          <h3 class="font-semibold text-2xl flex items-center gap-3">
+            <img
+              src="https://mjahmadee.github.io/Images/kntu.png"
+              class="w-10 h-10"
+              alt="KNTU"
+            />
+            Ph.D. in Electrical & Control Engineering —
+            <a
+              href="https://en.pars.kntu.ac.ir/"
+              style="color: inherit; text-decoration: underline;"
+              >K. N. Toosi University of Technology</a
+            >
+          </h3>
+          <p class="mt-4 text-lg">
+            Thesis:
+            <em
+              >Design & Implementation of an AI-Powered System for Phase
+              Recognition and Skill Assessment in Cataract Surgery Videos.</em
+            ><br />
+            <span class="italic">Supervisor: Prof. Hamid D. Taghirad</span>
+          </p>
+          <p class="mt-6 text-sm text-slate-500">
+            <strong>Year:</strong> 2022 – Present <strong>GPA:</strong> 4 / 4 (20 /
+            20)
+          </p>
+        </div>
+        <!-- M.Sc. -->
+        <div
+          class="bg-gray-50 shadow-lg rounded-2xl p-8"
+          data-aos="fade-left"
+          data-aos-delay="100"
+        >
+          <h3 class="font-semibold text-2xl flex items-center gap-3">
+            <img
+              src="https://mjahmadee.github.io/Images/kntu.png"
+              class="w-10 h-10"
+              alt="KNTU"
+            />
+            M.Sc. in Electrical & Control Engineering —
+            <a
+              href="https://en.pars.kntu.ac.ir/"
+              style="color: inherit; text-decoration: underline;"
+              >K. N. Toosi University of Technology</a
+            >
+          </h3>
+          <p class="mt-4 text-lg">
+            Thesis:
+            <em
+              >Development of eye-surgery skill assessment techniques focused on
+              video feedback.</em
+            ><br />
+            <span class="italic">Supervisor: Prof. Hamid D. Taghirad</span>
+          </p>
+          <p class="mt-6 text-sm text-slate-500">
+            <strong>Year:</strong> 2019 – 2022 <strong>GPA:</strong> 4 / 4
+          </p>
+        </div>
+        <!-- B.Sc. -->
+        <div
+          class="bg-gray-50 shadow-lg rounded-2xl p-8"
+          data-aos="fade-left"
+          data-aos-delay="200"
+        >
+          <h3 class="font-semibold text-2xl flex items-center gap-3">
+            <img
+              src="https://mjahmadee.github.io/Images/aut.png"
+              class="w-10 h-10"
+              alt="AUT"
+            />
+            B.Sc. in Electrical & Control Engineering —
+            <a
+              href="https://aut.ac.ir/"
+              style="color: inherit; text-decoration: underline;"
+              >Amirkabir University of Technology</a
+            >
+          </h3>
+          <p class="mt-4 text-lg">
+            Thesis:
+            <em>Design & implementation of indoor positioning for a four-wheeled robot.</em
+            ><br />
+            <span class="italic"
+              >Advisors: Dr. Mohammad A. Khosravi & Dr. Hajar Atrianfar</span
+            >
+          </p>
+          <p class="mt-6 text-sm text-slate-500">
+            <strong>Year:</strong> 2015 – 2019 <strong>GPA:</strong> 3.7 / 4
+          </p>
+        </div>
+        <!-- Diploma -->
+        <div
+          class="bg-gray-50 shadow-lg rounded-2xl p-8"
+          data-aos="fade-left"
+          data-aos-delay="300"
+        >
+          <h3 class="font-semibold text-2xl flex items-center gap-3">
+            <img
+              src="https://mjahmadee.github.io/Images/nodet.png"
+              class="w-10 h-10"
+              alt="NODET"
+            />
+            Diploma in Mathematics & Physics —
+            <a
+              href="https://en.wikipedia.org/wiki/National_Organization_for_Development_of_Exceptional_Talents"
+              style="color: inherit; text-decoration: underline;"
+              >National Organization for Development of Exceptional Talents (Sampad)</a
+            >
+          </h3>
+          <p class="mt-4 text-lg">
+            Completed rigorous STEM curriculum with advanced research projects.
+          </p>
+          <p class="mt-6 text-sm text-slate-500">
+            <strong>Year:</strong> 2011 – 2015 <strong>GPA:</strong> 4 / 4 (20 /
+            20)
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -127,109 +344,399 @@
   <!-- Technical Skills -->
   <section id="skills" class="py-20 bg-gray-50">
     <div class="max-w-screen-lg mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-12 text-center uppercase tracking-wide" data-aos="zoom-in">
+      <h2
+        class="text-4xl font-bold mb-12 text-center uppercase tracking-wide"
+        data-aos="zoom-in"
+      >
         🛠 Technical Skills
       </h2>
-      <!-- Skills entries as before... -->
+
+      <!-- Programming & Scripting -->
+      <div class="mt-8" data-aos="fade-up">
+        <h3 class="text-2xl font-semibold mb-6">📜 Programming & Scripting</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center justify-center hover:scale-105 transition"
+            data-aos="flip-left"
+          >
+            <i class="devicon-python-plain colored text-4xl mb-2"></i>
+            <span class="font-semibold">Python & OpenCV</span>
+          </div>
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center justify-center hover:scale-105 transition"
+            data-aos="flip-left"
+            data-aos-delay="100"
+          >
+            <i class="devicon-pytorch-original colored text-4xl mb-2"></i>
+            <span class="font-semibold">PyTorch & CUDA</span>
+          </div>
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center justify-center hover:scale-105 transition"
+            data-aos="flip-left"
+            data-aos-delay="200"
+          >
+            <i class="devicon-tensorflow-original colored text-4xl mb-2"></i>
+            <span class="font-semibold">TensorFlow & Sklearn</span>
+          </div>
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center justify-center hover:scale-105 transition"
+            data-aos="flip-left"
+            data-aos-delay="300"
+          >
+            <i class="fa-solid fa-code text-4xl mb-2"></i>
+            <span class="font-semibold">C / C++ / MATLAB</span>
+          </div>
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center justify-center hover:scale-105 transition"
+            data-aos="flip-left"
+            data-aos-delay="400"
+          >
+            <i class="devicon-django-plain colored text-4xl mb-2"></i>
+            <span class="font-semibold">Django & SQL</span>
+          </div>
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center justify-center hover:scale-105 transition"
+            data-aos="flip-left"
+            data-aos-delay="500"
+          >
+            <i class="fa-solid fa-mobile-screen-button text-4xl mb-2"></i>
+            <span class="font-semibold">Qt & Flutter</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Domain Knowledge -->
+      <div class="mt-12" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-2xl font-semibold mb-6">🧠 Domain Knowledge</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center justify-center hover:scale-105 transition"
+            data-aos="flip-left"
+          >
+            <i class="fa-solid fa-brain text-red-500 text-4xl mb-2"></i>
+            <span class="font-semibold">AI & Data Science</span>
+          </div>
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center justify-center hover:scale-105 transition"
+            data-aos="flip-left"
+            data-aos-delay="100"
+          >
+            <i class="fa-solid fa-eye text-green-500 text-4xl mb-2"></i>
+            <span class="font-semibold">Computer Vision & NLP</span>
+          </div>
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center justify-center hover:scale-105 transition"
+            data-aos="flip-left"
+            data-aos-delay="200"
+          >
+            <i class="fa-solid fa-layer-group text-purple-500 text-4xl mb-2"></i>
+            <span class="font-semibold">Machine / Deep Learning</span>
+          </div>
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center justify-center hover:scale-105 transition"
+            data-aos="flip-left"
+            data-aos-delay="300"
+          >
+            <i class="fa-solid fa-laptop-code text-indigo-500 text-4xl mb-2"></i>
+            <span class="font-semibold">Software Development</span>
+          </div>
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center justify-center hover:scale-105 transition"
+            data-aos="flip-left"
+            data-aos-delay="400"
+          >
+            <i class="fa-solid fa-server text-yellow-500 text-4xl mb-2"></i>
+            <span class="font-semibold">Backend Frameworks</span>
+          </div>
+          <div
+            class="bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center justify-center hover:scale-105 transition"
+            data-aos="flip-left"
+            data-aos-delay="500"
+          >
+            <i class="fa-solid fa-robot text-blue-500 text-4xl mb-2"></i>
+            <span class="font-semibold">Robotics & Control</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- LinkedIn -->
+      <div class="mt-16 text-center" data-aos="fade-up" data-aos-delay="400">
+        <i class="fa-brands fa-linkedin text-2xl align-middle mr-2"></i>
+        <a
+          href="https://www.linkedin.com/in/mjahmadi/details/skills/"
+          class="text-blue-600 underline hover:text-blue-800"
+          >More on LinkedIn</a
+        >
+      </div>
     </div>
   </section>
 
   <!-- Professional Experience -->
   <section id="experience" class="py-20 bg-slate-100">
     <div class="max-w-screen-lg mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-12 text-center uppercase tracking-wide" data-aos="zoom-in">
+      <h2
+        class="text-4xl font-bold mb-12 text-center uppercase tracking-wide"
+        data-aos="zoom-in"
+      >
         💼 Professional Experience
       </h2>
       <div class="space-y-12">
-        <!-- Experience entries as before... -->
+        <!-- ARAS AI & VR / Farabi Eye Hospital -->
+        <div
+          class="bg-white shadow-lg rounded-2xl p-8 transition hover:scale-105"
+          data-aos="fade-right"
+        >
+          <div class="flex items-center gap-4 mb-4">
+            <a href="https://aras.kntu.ac.ir/ai" class="flex items-center gap-2">
+              <img
+                src="https://mjahmadee.github.io/Images/aras.png"
+                alt="ARAS"
+                class="w-10 h-10"
+              />
+              <span class="text-2xl font-semibold">ARAS AI & VR Group</span>
+            </a>
+            <span class="text-xl font-semibold">|</span>
+            <a
+              href="https://en.tums.ac.ir/en/page/97/farabi-hospital"
+              class="flex items-center gap-2"
+            >
+              <img
+                src="https://mjahmadee.github.io/Images/farabi.png"
+                alt="Farabi"
+                class="w-10 h-10"
+              />
+              <span class="text-2xl font-semibold">Farabi Eye Hospital</span>
+            </a>
+            <span class="ml-auto text-sm text-slate-500">2019 – Present</span>
+          </div>
+          <p class="text-lg">
+            Head of
+            <a href="https://aras.kntu.ac.ir/ai" class="underline"
+              >ARAS AI, VR & Software Group</a
+            >. Over 5 years leading R&D, development, and deployment of AI &
+            robotics products as a Computer Vision Engineer & Roboticist.
+          </p>
+        </div>
+        <!-- MediversAI CTO -->
+        <div
+          class="bg-white shadow-lg rounded-2xl p-8 transition hover:scale-105"
+          data-aos="fade-right"
+          data-aos-delay="100"
+        >
+          <div class="flex items-center gap-4 mb-4">
+            <a href="https://www.mediversai.com/" class="flex items-center gap-2">
+              <img
+                src="https://mjahmadee.github.io/Images/mediversai.png"
+                alt="MediversAI"
+                class="w-10 h-10"
+              />
+              <span class="text-2xl font-semibold">MediversAI</span>
+            </a>
+            <span class="ml-auto text-sm text-slate-500">2023 – Present</span>
+          </div>
+          <p class="text-lg">
+            Chief Technology Officer (CTO), AI Specialist & Software Dev.
+            Manager. Leading full-stack engineering and AI innovation for advanced
+            surgical video analytics.
+          </p>
+        </div>
+        <!-- SmarTeeth & Smartory -->
+        <div
+          class="bg-white shadow-lg rounded-2xl p-8 transition hover:scale-105"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        >
+          <div class="flex items-center gap-4 mb-4">
+            <a href="https://smarteeth.ai/" class="flex items-center gap-2">
+              <img
+                src="https://mjahmadee.github.io/Images/smarteeth.png"
+                alt="SmarTeeth"
+                class="w-10 h-10"
+              />
+              <span class="text-2xl font-semibold">SmarTeeth</span>
+            </a>
+            <span class="text-xl font-semibold">|</span>
+            <a href="https://smartory.co/" class="flex items-center gap-2">
+              <img
+                src="https://mjahmadee.github.io/Images/Artboard-1mdpi-1.png"
+                alt="Smartory"
+                class="w-10 h-10"
+              />
+              <span class="text-2xl font-semibold">Smartory</span>
+            </a>
+            <span class="ml-auto text-sm text-slate-500">2023 – Present</span>
+          </div>
+          <p class="text-lg">
+            Technical Lead in AI, CV & Software Dev. Architected deep-learning
+            pipelines for dental X-ray analysis and managed cross-functional
+            teams.
+          </p>
+        </div>
+        <!-- RSI & ICRoM/IEEE -->
+        <div
+          class="bg-white shadow-lg rounded-2xl p-8 transition hover:scale-105"
+          data-aos="fade-right"
+          data-aos-delay="300"
+        >
+          <div class="flex items-center gap-4 mb-4">
+            <a href="https://rsiran.ir/en/" class="flex items-center gap-2">
+              <img
+                src="https://mjahmadee.github.io/Images/rsi.png"
+                alt="RSI"
+                class="w-10 h-10"
+              />
+              <span class="text-2xl font-semibold">RSI</span>
+            </a>
+            <span class="text-xl font-semibold">|</span>
+            <a href="https://icrom.ir/" class="flex items-center gap-2">
+              <img
+                src="https://mjahmadee.github.io/Images/ieee.png"
+                alt="ICRoM"
+                class="w-10 h-10"
+              />
+              <span class="text-2xl font-semibold">ICRoM & IEEE</span>
+            </a>
+            <span class="ml-auto text-sm text-slate-500">2019 – Present</span>
+          </div>
+          <p class="text-lg">
+            IT Committee Chair, Publications & Student Committee Member. Driving
+            conference organization, technical publications, and student
+            engagement in robotics & AI.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Selected Projects (stacked vertical horizontal cards) -->
+  <!-- Selected Projects (vertical stack) -->
   <section id="projects" class="py-20 bg-gray-50">
     <div class="max-w-screen-lg mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-8 text-center uppercase tracking-wide" data-aos="zoom-in">
+      <h2
+        class="text-4xl font-bold mb-8 text-center uppercase tracking-wide"
+        data-aos="zoom-in"
+      >
         🚀 Selected Projects
       </h2>
-      <div class="space-y-8" data-aos="fade-up">
-        <!-- Each card full-width, flex horizontal -->
-        <div class="bg-white shadow-lg rounded-2xl p-8 flex items-center hover:shadow-2xl transition">
-          <img src="https://mjahmadee.github.io/Images/mediversai.png" alt="Surgicise" class="w-20 h-20 flex-shrink-0 mr-6" />
+      <div class="space-y-6" data-aos="fade-up">
+        <div class="bg-white shadow-lg rounded-2xl p-6 flex gap-6 hover:shadow-2xl transition">
+          <img
+            src="https://mjahmadee.github.io/Images/mediversai.png"
+            alt="MediversAI"
+            class="w-24 h-24 flex-shrink-0"
+          />
           <div>
-            <h3 class="text-2xl font-semibold mb-2">
-              <a href="https://www.mediversai.com/" class="underline text-blue-600 hover:text-blue-800">
-                Surgicise AI-Powered Software for Surgical Video Analysis & Skill Assessment
-              </a>
+            <h3 class="text-xl font-semibold mb-2">
+              Surgicise AI-Powered Software for Surgical Video Analysis & Skill Assessment
             </h3>
             <p class="text-gray-700">
               Platform integrating phase segmentation, instrument tracking, and skill scoring for ophthalmic surgery videos.
             </p>
           </div>
         </div>
-        <div class="bg-white shadow-lg rounded-2xl p-8 flex items-center hover:shadow-2xl transition">
-          <img src="https://mjahmadee.github.io/Images/smarteeth.png" alt="SmarTeeth" class="w-20 h-20 flex-shrink-0 mr-6" />
+        <div class="bg-white shadow-lg rounded-2xl p-6 flex gap-6 hover:shadow-2xl transition">
+          <img
+            src="https://mjahmadee.github.io/Images/smarteeth.png"
+            alt="SmarTeeth"
+            class="w-24 h-24 flex-shrink-0"
+          />
           <div>
-            <h3 class="text-2xl font-semibold mb-2">
-              <a href="https://smarteeth.ai/" class="underline text-blue-600 hover:text-blue-800">
-                SmarTeeth AI-Powered Software
-              </a>
+            <h3 class="text-xl font-semibold mb-2">
+              SmarTeeth AI-Powered Software
             </h3>
             <p class="text-gray-700">
               Deep-learning toolkit for robust tooth detection & caries segmentation in dental X-rays.
             </p>
           </div>
         </div>
-        <div class="bg-white shadow-lg rounded-2xl p-8 flex items-center hover:shadow-2xl transition">
-          <img src="https://mjahmadee.github.io/Images/aras.png" alt="ARAS" class="w-20 h-20 flex-shrink-0 mr-6" />
+        <div class="bg-white shadow-lg rounded-2xl p-6 flex gap-6 hover:shadow-2xl transition">
+          <img
+            src="https://mjahmadee.github.io/Images/aras.png"
+            alt="ARAS"
+            class="w-24 h-24 flex-shrink-0"
+          />
           <div>
-            <h3 class="text-2xl font-semibold mb-2">
-              <a href="#" class="underline text-blue-600 hover:text-blue-800">
-                ARAS Surgical Analysis Software & Video-Guided Surgery System
-              </a>
+            <h3 class="text-xl font-semibold mb-2">
+              ARAS Surgical Analysis Software & Video-Guided Surgery System
             </h3>
             <p class="text-gray-700">
-              Real-time analyzer enabling frame-by-frame review & haptic feedback for cataract surgery training.
+              Real-time analyzer with frame-by-frame review & haptic feedback for cataract surgery training.
             </p>
           </div>
         </div>
-        <!-- More cards similarly... -->
-        <div class="flex justify-center mt-6">
-          <i class="fa-brands fa-github text-4xl mr-2 text-gray-700"></i>
-          <a href="https://github.com/MJAHMADEE" class="text-xl font-semibold underline text-blue-600 hover:text-blue-800">
-            More on GitHub
-          </a>
+        <div class="bg-white shadow-lg rounded-2xl p-6 flex gap-6 hover:shadow-2xl transition">
+          <img
+            src="https://mjahmadee.github.io/Images/aras.png"
+            alt="ARAS"
+            class="w-24 h-24 flex-shrink-0"
+          />
+          <div>
+            <h3 class="text-xl font-semibold mb-2">
+              Video Understanding: Surgical Analysis, Skill Assessment & Transfer
+            </h3>
+            <p class="text-gray-700">
+              Framework for automated skill transfer via multimodal video analytics & metric-driven feedback.
+            </p>
+          </div>
+        </div>
+        <div class="bg-white shadow-lg rounded-2xl p-6 flex gap-6 hover:shadow-2xl transition">
+          <img
+            src="https://mjahmadee.github.io/Images/aras.png"
+            alt="ARAS"
+            class="w-24 h-24 flex-shrink-0"
+          />
+          <div>
+            <h3 class="text-xl font-semibold mb-2">
+              Computer-Aided Detection & Diagnosis in Medical Imaging
+            </h3>
+            <p class="text-gray-700">
+              AI pipelines for lesion detection & classification across medical imaging modalities.
+            </p>
+          </div>
+        </div>
+        <div class="bg-white shadow-lg rounded-2xl p-6 flex gap-6 hover:shadow-2xl transition">
+          <img
+            src="https://mjahmadee.github.io/Images/aras.png"
+            alt="ARAS"
+            class="w-24 h-24 flex-shrink-0"
+          />
+          <div>
+            <h3 class="text-xl font-semibold mb-2">
+              Smart Surgical Training: Phantom, Gamification & VR/MR
+            </h3>
+            <p class="text-gray-700">
+              Immersive training environments combining physical phantoms and VR for enhanced surgical skill development.
+            </p>
+          </div>
+        </div>
+        <div class="bg-white shadow-lg rounded-2xl p-6 flex gap-6 hover:shadow-2xl transition">
+          <img
+            src="https://mjahmadee.github.io/Images/git1.png"
+            alt="GitHub"
+            class="w-24 h-24 flex-shrink-0"
+          />
+          <div class="flex-1 flex items-center justify-center">
+            <a href="https://github.com/MJAHMADEE" class="text-xl font-semibold underline text-blue-600 hover:text-blue-800">
+              More on GitHub
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Selected Publications -->
-  <section id="publications" class="py-20 bg-cover bg-center" style="background-image:url('https://mjahmadee.github.io/Images/publications-bg.jpg')">
-    <div class="bg-white/90 backdrop-blur-md max-w-screen-lg mx-auto px-6 py-12 rounded-2xl" data-aos="fade-up">
-      <h2 class="text-4xl font-bold mb-8 text-center uppercase tracking-wide">📑 Selected Publications</h2>
+  <section id="publications" class="py-20 bg-white">
+    <div class="max-w-screen-lg mx-auto px-6" data-aos="fade-up">
+      <h2 class="text-4xl font-bold mb-8 text-center uppercase tracking-wide">
+        📑 Selected Publications
+      </h2>
 
-      <!-- Search + Styled Select -->
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
-        <input
-          id="pub-search"
-          type="search"
-          placeholder="🔍 Search..."
-          class="w-full md:w-1/2 border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-        <div class="relative inline-block">
-          <select
-            id="pub-count"
-            class="appearance-none bg-white border border-gray-300 rounded-full px-4 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            <option value="5">Top 5</option>
-            <option value="10" selected>Top 10</option>
-            <option value="all">All</option>
-          </select>
-          <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-600">
-            <i class="fa-solid fa-chevron-down"></i>
-          </span>
-        </div>
+      <!-- Button group for top N -->
+      <div class="flex justify-center gap-4 mb-6">
+        <button data-count="5" class="btn-count px-4 py-2 rounded-full border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition">Top 5</button>
+        <button data-count="10" class="btn-count px-4 py-2 rounded-full border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition">Top 10</button>
+        <button data-count="all" class="btn-count px-4 py-2 rounded-full border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition">All</button>
+        <input id="pub-search" type="search" placeholder="🔍 Search..." class="ml-6 border border-gray-300 rounded-full px-4 py-2 w-1/3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       </div>
 
       <div class="overflow-x-auto shadow-lg rounded-lg bg-white">
@@ -238,175 +745,137 @@
             <tr>
               <th class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase">Year</th>
               <th class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase">Title &amp; Link</th>
-              <th class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase">Venue</th>
-              <th class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase">Cited</th>
+              <th class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase">Venue / DOI</th>
+              <th class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase">Cited by</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-100">
             <!-- 2025 -->
-            <tr class="hover:bg-gray-50">
+            <tr>
               <td class="px-6 py-4 text-sm text-gray-600">2025</td>
               <td class="px-6 py-4">
                 <a href="https://ssrn.com/abstract=5209513" class="text-blue-600 underline">
-                  Evaluating Force and Motion in Posterior Vitreous Detachment Maneuvers Using a Robotic Data Acquisition System…
+                  Evaluating Force & Motion in Posterior Vitreous Detachment Maneuvers Using a Robotic Data Acquisition System in Cadaveric Human Eyes
                 </a>
               </td>
               <td class="px-6 py-4 text-sm text-gray-600">SSRN 5209513</td>
               <td class="px-6 py-4 text-sm text-gray-600">—</td>
             </tr>
             <!-- 2024 -->
-            <tr class="hover:bg-gray-50">
+            <tr>
               <td class="px-6 py-4 text-sm text-gray-600">2024</td>
               <td class="px-6 py-4">
-                <a href="#" class="text-blue-600 underline">
-                  AugmenTory: A Fast and Flexible Polygon Augmentation Library
-                </a>
+                Development and Integration of an Advanced GUI with Real-Time Data Logging for RCM-Based Robotic Surgery Devices
+              </td>
+              <td class="px-6 py-4 text-sm text-gray-600">2024 12th RSI ICRoM, IEEE</td>
+              <td class="px-6 py-4 text-sm text-gray-600">—</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 text-sm text-gray-600">2024</td>
+              <td class="px-6 py-4">
+                AI-Powered Framework for Cataract Surgery Video Optimization
+              </td>
+              <td class="px-6 py-4 text-sm text-gray-600">2024 12th RSI ICRoM, IEEE</td>
+              <td class="px-6 py-4 text-sm text-gray-600">—</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 text-sm text-gray-600">2024</td>
+              <td class="px-6 py-4">
+                AugmenTory: A Fast and Flexible Polygon Augmentation Library
               </td>
               <td class="px-6 py-4 text-sm text-gray-600">arXiv:2405.04442</td>
               <td class="px-6 py-4 text-sm text-gray-600">—</td>
             </tr>
-            <tr class="hover:bg-gray-50">
-              <td class="px-6 py-4 text-sm text-gray-600">2024</td>
-              <td class="px-6 py-4">
-                <a href="#" class="text-blue-600 underline">
-                  Development and Integration of an Advanced GUI with Real-Time Data Logging for RCM-Based Robotic Surgery Devices
-                </a>
-              </td>
-              <td class="px-6 py-4 text-sm text-gray-600">2024 12th RSI ICRoM, IEEE</td>
-              <td class="px-6 py-4 text-sm text-gray-600">—</td>
-            </tr>
-            <tr class="hover:bg-gray-50">
-              <td class="px-6 py-4 text-sm text-gray-600">2024</td>
-              <td class="px-6 py-4">
-                <a href="#" class="text-blue-600 underline">
-                  AI-Powered Framework for Cataract Surgery Video Optimization
-                </a>
-              </td>
-              <td class="px-6 py-4 text-sm text-gray-600">2024 12th RSI ICRoM, IEEE</td>
-              <td class="px-6 py-4 text-sm text-gray-600">—</td>
-            </tr>
             <!-- 2023 -->
-            <tr class="hover:bg-gray-50">
+            <tr>
               <td class="px-6 py-4 text-sm text-gray-600">2023</td>
               <td class="px-6 py-4">
-                <a href="https://arxiv.org/abs/2312.10208" class="text-blue-600 underline">
-                  Video-based Surgical Skill Assessment using Tree-based Gaussian Process Classifier
-                </a>
+                Video-based Surgical Skill Assessment using Tree-based Gaussian Process Classifier
               </td>
               <td class="px-6 py-4 text-sm text-gray-600">arXiv:2312.10208</td>
               <td class="px-6 py-4 text-sm text-gray-600">1</td>
             </tr>
-            <tr class="hover:bg-gray-50">
+            <tr>
               <td class="px-6 py-4 text-sm text-gray-600">2023</td>
               <td class="px-6 py-4">
-                <a href="#" class="text-blue-600 underline">
-                  Advanced Deep Learning-Based Approach for Tooth Detection, and Dental Cavity and Restoration Segmentation in X-Ray Images
-                </a>
+                Advanced Deep Learning-Based Approach for Tooth Detection, and Dental Cavity and Restoration Segmentation in X-Ray Images
               </td>
-              <td class="px-6 py-4 text-sm text-gray-600">2023 11th RSI ICRoM, IEEE</td>
+              <td class="px-6 py-4 text-sm text-gray-600">2023 11th RSI ICRoM</td>
               <td class="px-6 py-4 text-sm text-gray-600">2</td>
             </tr>
-            <tr class="hover:bg-gray-50">
+            <tr>
               <td class="px-6 py-4 text-sm text-gray-600">2023</td>
               <td class="px-6 py-4">
-                <a href="#" class="text-blue-600 underline">
-                  AI-driven keratoconus detection: integrating medical insights for enhanced diagnosis
-                </a>
+                AI-driven keratoconus detection: Integrating Medical Insights for Enhanced Diagnosis
               </td>
-              <td class="px-6 py-4 text-sm text-gray-600">2023 11th RSI ICRoM, IEEE</td>
+              <td class="px-6 py-4 text-sm text-gray-600">2023 11th RSI ICRoM</td>
               <td class="px-6 py-4 text-sm text-gray-600">2</td>
             </tr>
-            <tr class="hover:bg-gray-50">
+            <tr>
               <td class="px-6 py-4 text-sm text-gray-600">2023</td>
               <td class="px-6 py-4">
-                <a href="#" class="text-blue-600 underline">
-                  A Deep Dive Into Capsulorhexis Segmentation: From Dataset Creation to SAM Fine-tuning
-                </a>
+                A Deep Dive Into Capsulorhexis Segmentation: From Dataset Creation to SAM Fine-tuning
               </td>
-              <td class="px-6 py-4 text-sm text-gray-600">2023 11th RSI ICRoM, IEEE</td>
+              <td class="px-6 py-4 text-sm text-gray-600">2023 11th RSI ICRoM</td>
               <td class="px-6 py-4 text-sm text-gray-600">1</td>
             </tr>
-            <tr class="hover:bg-gray-50">
+            <tr>
               <td class="px-6 py-4 text-sm text-gray-600">2023</td>
               <td class="px-6 py-4">
-                <a href="#" class="text-blue-600 underline">
-                  Toward Keratoconus Diagnosis: Dataset Creation and AI Network Examination
-                </a>
+                Toward Keratoconus Diagnosis: Dataset Creation and AI Network Examination
               </td>
-              <td class="px-6 py-4 text-sm text-gray-600">2023 11th RSI ICRoM, IEEE</td>
+              <td class="px-6 py-4 text-sm text-gray-600">2023 11th RSI ICRoM</td>
               <td class="px-6 py-4 text-sm text-gray-600">—</td>
             </tr>
-            <tr class="hover:bg-gray-50">
+            <tr>
               <td class="px-6 py-4 text-sm text-gray-600">2023</td>
               <td class="px-6 py-4">
-                <a href="#" class="text-blue-600 underline">
-                  Image Processing and Machine Vision in Surgery and Its Training
-                </a>
+                Image Processing and Machine Vision in Surgery and Its Training
               </td>
               <td class="px-6 py-4 text-sm text-gray-600">Journal of Control 17(2), 25-46</td>
               <td class="px-6 py-4 text-sm text-gray-600">—</td>
             </tr>
             <!-- 2022 -->
-            <tr class="hover:bg-gray-50">
+            <tr>
               <td class="px-6 py-4 text-sm text-gray-600">2022</td>
               <td class="px-6 py-4">
-                <a href="https://ieeexplore.ieee.org/abstract/document/10025355/" class="text-blue-600 underline">
-                  Surgical Instrument Tracking for Capsulorhexis Eye Surgery Based on Siamese Networks
-                </a>
+                Surgical instrument tracking for capsulorhexis eye surgery based on siamese networks
               </td>
-              <td class="px-6 py-4 text-sm text-gray-600">IEEE 10025355</td>
+              <td class="px-6 py-4 text-sm text-gray-600">2022 10th RSI ICRoM</td>
               <td class="px-6 py-4 text-sm text-gray-600">3</td>
             </tr>
-            <tr class="hover:bg-gray-50">
+            <tr>
               <td class="px-6 py-4 text-sm text-gray-600">2022</td>
               <td class="px-6 py-4">
-                <a href="#" class="text-blue-600 underline">
-                  An Observer-Based Responsive Variable Impedance Control for Dual-User Haptic Training System
-                </a>
+                An Observer-Based Responsive Variable Impedance Control for Dual-User Haptic Training System
               </td>
-              <td class="px-6 py-4 text-sm text-gray-600">2021 9th RSI ICRoM</td>
+              <td class="px-6 py-4 text-sm text-gray-600">2022 10th RSI ICRoM</td>
               <td class="px-6 py-4 text-sm text-gray-600">3</td>
             </tr>
             <!-- 2021 -->
-            <tr class="hover:bg-gray-50">
+            <tr>
               <td class="px-6 py-4 text-sm text-gray-600">2021</td>
               <td class="px-6 py-4">
-                <a href="https://ieeexplore.ieee.org/abstract/document/9663494/" class="text-blue-600 underline">
-                  ARAS-Farabi Experimental Framework for Skill Assessment in Capsulorhexis Surgery
-                </a>
+                ARAS-Farabi Experimental Framework for Skill Assessment in Capsulorhexis Surgery
               </td>
-              <td class="px-6 py-4 text-sm text-gray-600">IEEE 9663494</td>
+              <td class="px-6 py-4 text-sm text-gray-600">2021 9th RSI ICRoM</td>
               <td class="px-6 py-4 text-sm text-gray-600">4</td>
             </tr>
-            <tr class="hover:bg-gray-50">
+            <tr>
               <td class="px-6 py-4 text-sm text-gray-600">2021</td>
               <td class="px-6 py-4">
-                <a href="#" class="text-blue-600 underline">
-                  Adaptive Robust Impedance Control of Haptic Systems for Skill Transfer
-                </a>
+                Adaptive Robust Impedance Control of Haptic Systems for Skill Transfer
               </td>
               <td class="px-6 py-4 text-sm text-gray-600">2021 9th RSI ICRoM</td>
               <td class="px-6 py-4 text-sm text-gray-600">7</td>
             </tr>
-            <tr class="hover:bg-gray-50">
-              <td class="px-6 py-4 text-sm text-gray-600">2021</td>
-              <td class="px-6 py-4">
-                <a href="https://ieeexplore.ieee.org/abstract/document/9663448/" class="text-blue-600 underline">
-                  Closed-form Inverse kinematics Equations of a Robotic Finger Mechanism
-                </a>
-              </td>
-              <td class="px-6 py-4 text-sm text-gray-600">IEEE 9663448</td>
-              <td class="px-6 py-4 text-sm text-gray-600">3</td>
-            </tr>
             <!-- 2019 -->
-            <tr class="hover:bg-gray-50">
+            <tr>
               <td class="px-6 py-4 text-sm text-gray-600">2019</td>
               <td class="px-6 py-4">
-                <a href="https://ieeexplore.ieee.org/abstract/document/9071915/" class="text-blue-600 underline">
-                  Resilient Consensus in Double-Integrator Systems with Switching Networks Facing Smart Attacks
-                </a>
+                Resilient Consensus in Double-Integrator Systems with Switching Networks Facing Smart Attacks
               </td>
-              <td class="px-6 py-4 text-sm text-gray-600">IEEE 9071915</td>
+              <td class="px-6 py-4 text-sm text-gray-600">2019 7th ICRoM</td>
               <td class="px-6 py-4 text-sm text-gray-600">1</td>
             </tr>
           </tbody>
@@ -428,187 +897,287 @@
   <!-- Academic Experiences -->
   <section id="academic-experiences" class="py-20 bg-white">
     <div class="max-w-screen-lg mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-12 text-center uppercase tracking-wide" data-aos="zoom-in">
+      <h2
+        class="text-4xl font-bold mb-12 text-center uppercase tracking-wide"
+        data-aos="zoom-in"
+      >
         🎓 Academic Experiences
       </h2>
       <div class="space-y-8" data-aos="fade-up">
-        <h3 class="text-2xl font-semibold mb-4 flex items-center gap-2">📝 Teaching Assistant</h3>
-        <div class="grid sm:grid-cols-2 gap-6">
-          <!-- Spring 2025 -->
-          <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
-            <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
-            <div>
-              <a href="https://github.com/MJAHMADEE/MachineLearning2025s" class="text-lg font-semibold underline">
-                Machine Learning
-              </a>
-              <span class="text-sm text-slate-500">— Dr. Mahdi Aliyari-Shoorehdeli</span><br />
-              <span class="text-sm text-slate-500">Spring 2025</span>
-              <a href="https://github.com/MJAHMADEE/MachineLearning2025s" class="inline-block ml-2">
-                <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
-              </a>
+        <!-- Teaching Assistant -->
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+            📝 Teaching Assistant
+          </h3>
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
+              <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
+              <div>
+                <a href="https://github.com/MJAHMADEE/MachineLearning2025s" class="text-lg font-semibold underline">
+                  Machine Learning
+                </a>
+                <span class="text-sm text-slate-500">— Dr. Mahdi Aliyari-Shoorehdeli</span><br />
+                <span class="text-sm text-slate-500">Spring 2025</span>
+                <a href="https://github.com/MJAHMADEE/MachineLearning2025s" class="inline-block ml-2">
+                  <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+            <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
+              <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
+              <div>
+                <a href="https://github.com/MJAHMADEE/AI2025s" class="text-lg font-semibold underline">
+                  Artificial Intelligence
+                </a>
+                <span class="text-sm text-slate-500">— Dr. Mahdi Aliyari-Shoorehdeli</span><br />
+                <span class="text-sm text-slate-500">Spring 2025</span>
+                <a href="https://github.com/MJAHMADEE/AI2025s" class="inline-block ml-2">
+                  <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+            <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
+              <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
+              <div>
+                <a href="https://github.com/MJAHMADEE/LinearControl2024F" class="text-lg font-semibold underline">
+                  Linear Control
+                </a>
+                <span class="text-sm text-slate-500">— Prof. Hamid D. Taghirad</span><br />
+                <span class="text-sm text-slate-500">Fall 2024</span>
+                <a href="https://github.com/MJAHMADEE/LinearControl2024F" class="inline-block ml-2">
+                  <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+            <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
+              <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
+              <div>
+                <a href="https://github.com/MJAHMADEE/DeepLearning2024F" class="text-lg font-semibold underline">
+                  Deep Learning
+                </a>
+                <span class="text-sm text-slate-500">— Dr. Mahdi Aliyari-Shoorehdeli</span><br />
+                <span class="text-sm text-slate-500">Fall 2024</span>
+                <a href="https://github.com/MJAHMADEE/DeepLearning2024F" class="inline-block ml-2">
+                  <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+            <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
+              <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
+              <div>
+                <a href="https://github.com/MJAHMADEE/MachineLearning2024F" class="text-lg font-semibold underline">
+                  Fundamentals of Intelligent Systems
+                </a>
+                <span class="text-sm text-slate-500">— Dr. Mahdi Aliyari-Shoorehdeli</span><br />
+                <span class="text-sm text-slate-500">Fall 2024</span>
+                <a href="https://github.com/MJAHMADEE/MachineLearning2024F" class="inline-block ml-2">
+                  <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+            <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
+              <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
+              <div>
+                <a href="https://github.com/MJAHMADEE/ModernControl2024W" class="text-lg font-semibold underline">
+                  Modern Control
+                </a>
+                <span class="text-sm text-slate-500">— Prof. Hamid D. Taghirad</span><br />
+                <span class="text-sm text-slate-500">Spring 2024</span>
+                <a href="https://github.com/MJAHMADEE/ModernControl2024W" class="inline-block ml-2">
+                  <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+            <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
+              <img src="https://mjahmadee.github.io/Images/aut.png" alt="AUT" class="w-12 h-12" />
+              <div>
+                <a href="https://github.com/MJAHMADEE/AIinRobotics2024W" class="text-lg font-semibold underline">
+                  AI in Robotics
+                </a>
+                <span class="text-sm text-slate-500">— Dr. Iman Sharifi</span><br />
+                <span class="text-sm text-slate-500">Spring 2024</span>
+                <a href="https://github.com/MJAHMADEE/AIinRobotics2024W" class="inline-block ml-2">
+                  <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+            <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
+              <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
+              <div>
+                <a href="https://github.com/MJAHMADEE/MachineLearning2024W" class="text-lg font-semibold underline">
+                  Machine Learning
+                </a>
+                <span class="text-sm text-slate-500">— Dr. Mahdi Aliyari-Shoorehdeli</span><br />
+                <span class="text-sm text-slate-500">Spring 2024</span>
+                <a href="https://github.com/MJAHMADEE/MachineLearning2024W" class="inline-block ml-2">
+                  <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+            <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
+              <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
+              <div>
+                <a href="https://github.com/MJAHMADEE/MachineLearning2023" class="text-lg font-semibold underline">
+                  Machine Learning
+                </a>
+                <span class="text-sm text-slate-500">— Dr. Mahdi Aliyari-Shoorehdeli</span><br />
+                <span class="text-sm text-slate-500">Fall 2023</span>
+                <a href="https://github.com/MJAHMADEE/MachineLearning2023" class="inline-block ml-2">
+                  <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+            <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
+              <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
+              <div>
+                <a href="https://github.com/MJAHMADEE/MachineLearning2023" class="text-lg font-semibold underline">
+                  Fundamentals of Intelligent Systems
+                </a>
+                <span class="text-sm text-slate-500">— Dr. Mahdi Aliyari-Shoorehdeli</span><br />
+                <span class="text-sm text-slate-500">Fall 2023</span>
+                <a href="https://github.com/MJAHMADEE/MachineLearning2023" class="inline-block ml-2">
+                  <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+            <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
+              <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
+              <div>
+                <a href="https://github.com/MJAHMADEE/Machine-Learning-and-Fault-Detection" class="text-lg font-semibold underline">
+                  Fault Detection & Diagnosis
+                </a>
+                <span class="text-sm text-slate-500">— Dr. Mahdi Aliyari-Shoorehdeli</span><br />
+                <span class="text-sm text-slate-500">Spring 2023</span>
+                <a href="https://github.com/MJAHMADEE/Machine-Learning-and-Fault-Detection" class="inline-block ml-2">
+                  <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+            <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
+              <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
+              <div>
+                <a href="https://github.com/MJAHMADEE/Industrial_Control_Course" class="text-lg font-semibold underline">
+                  Industrial Control
+                </a>
+                <span class="text-sm text-slate-500">— Prof. Hamid D. Taghirad</span><br />
+                <span class="text-sm text-slate-500">Spring 2023</span>
+                <a href="https://github.com/MJAHMADEE/Industrial_Control_Course" class="inline-block ml-2">
+                  <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+            <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
+              <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
+              <div>
+                <a href="https://github.com/aras-labs/Robotics" class="text-lg font-semibold underline">
+                  Robotics
+                </a>
+                <span class="text-sm text-slate-500">— Prof. Hamid D. Taghirad</span><br />
+                <span class="text-sm text-slate-500">Spring 2022</span>
+                <a href="https://github.com/aras-labs/Robotics" class="inline-block ml-2">
+                  <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
+                </a>
+              </div>
             </div>
           </div>
-          <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
-            <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
-            <div>
-              <a href="https://github.com/MJAHMADEE/AI2025s" class="text-lg font-semibold underline">
-                Artificial Intelligence
+        </div>
+
+        <!-- Reviewer -->
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+            📰 Reviewer
+          </h3>
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3">
+              <img src="https://mjahmadee.github.io/Images/ieee.png" alt="IEEE" class="w-8 h-8" />
+              <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=87" class="underline">
+                IEEE Transactions on Control Systems Technology
               </a>
-              <span class="text-sm text-slate-500">— Dr. Mahdi Aliyari-Shoorehdeli</span><br />
-              <span class="text-sm text-slate-500">Spring 2025</span>
-              <a href="https://github.com/MJAHMADEE/AI2025s" class="inline-block ml-2">
-                <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
+              <span class="ml-auto text-sm text-slate-500">2023 – Present</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <img src="https://mjahmadee.github.io/Images/ieee.png" alt="IEEE" class="w-8 h-8" />
+              <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8253409" class="underline">
+                IEEE Transactions on Medical Robotics and Bionics
               </a>
-            </div>
-          </div>
-          <!-- Fall 2024 -->
-          <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
-            <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
-            <div>
-              <a href="https://github.com/MJAHMADEE/LinearControl2024F" class="text-lg font-semibold underline">
-                Linear Control
+              <span class="ml-auto text-sm text-slate-500">2023 – Present</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <img src="https://mjahmadee.github.io/Images/jama.png" alt="JAMA" class="w-8 h-8" />
+              <a href="https://jamanetwork.com/journals/jama" class="underline">
+                Journal of the American Medical Association (JAMA)
               </a>
-              <span class="text-sm text-slate-500">— Prof. Hamid D. Taghirad</span><br />
-              <span class="text-sm text-slate-500">Fall 2024</span>
-              <a href="https://github.com/MJAHMADEE/LinearControl2024F" class="inline-block ml-2">
-                <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
+              <span class="ml-auto text-sm text-slate-500">2024 – Present</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <img src="https://mjahmadee.github.io/Images/ieee.png" alt="Journal of Control" class="w-8 h-8" />
+              <a href="https://joc.kntu.ac.ir/en" class="underline">
+                Journal Of Control
               </a>
-            </div>
-          </div>
-          <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
-            <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
-            <div>
-              <a href="https://github.com/MJAHMADEE/DeepLearning2024F" class="text-lg font-semibold underline">
-                Deep Learning
+              <span class="ml-auto text-sm text-slate-500">2023 – Present</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <img src="https://mjahmadee.github.io/Images/ieee.png" alt="ICRoM" class="w-8 h-8" />
+              <a href="https://icrom.ir/" class="underline">
+                International Conference on Robotics and Mechatronics
               </a>
-              <span class="text-sm text-slate-500">— Dr. Mahdi Aliyari-Shoorehdeli</span><br />
-              <span class="text-sm text-slate-500">Fall 2024</span>
-              <a href="https://github.com/MJAHMADEE/DeepLearning2024F" class="inline-block ml-2">
-                <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-          <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
-            <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
-            <div>
-              <a href="https://github.com/MJAHMADEE/MachineLearning2024F" class="text-lg font-semibold underline">
-                Fundamentals of Intelligent Systems
-              </a>
-              <span class="text-sm text-slate-500">— Dr. Mahdi Aliyari-Shoorehdeli</span><br />
-              <span class="text-sm text-slate-500">Fall 2024</span>
-              <a href="https://github.com/MJAHMADEE/MachineLearning2024F" class="inline-block ml-2">
-                <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-          <!-- Spring 2024 -->
-          <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
-            <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
-            <div>
-              <a href="https://github.com/MJAHMADEE/ModernControl2024W" class="text-lg font-semibold underline">
-                Modern Control
-              </a>
-              <span class="text-sm text-slate-500">— Prof. Hamid D. Taghirad</span><br />
-              <span class="text-sm text-slate-500">Spring 2024</span>
-              <a href="https://github.com/MJAHMADEE/ModernControl2024W" class="inline-block ml-2">
-                <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-          <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
-            <img src="https://mjahmadee.github.io/Images/aut.png" alt="AUT" class="w-12 h-12" />
-            <div>
-              <a href="https://github.com/MJAHMADEE/AIinRobotics2024W" class="text-lg font-semibold underline">
-                AI in Robotics
-              </a>
-              <span class="text-sm text-slate-500">— Dr. Iman Sharifi</span><br />
-              <span class="text-sm text-slate-500">Spring 2024</span>
-              <a href="https://github.com/MJAHMADEE/AIinRobotics2024W" class="inline-block ml-2">
-                <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-          <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">  
-            <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
-            <div>
-              <a href="https://github.com/MJAHMADEE/MachineLearning2024W" class="text-lg font-semibold underline">
-                Machine Learning
-              </a>
-              <span class="text-sm text-slate-500">— Dr. Mahdi Aliyari-Shoorehdeli</span><br />
-              <span class="text-sm text-slate-500">Spring 2024</span>
-              <a href="https://github.com/MJAHMADEE/MachineLearning2024W" class="inline-block ml-2">
-                <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-          <!-- Fall 2023 -->
-          <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
-            <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
-            <div>
-              <a href="https://github.com/MJAHMADEE/MachineLearning2023" class="text-lg font-semibold underline">
-                Machine Learning
-              </a>
-              <span class="text-sm text-slate-500">— Dr. Mahdi Aliyari-Shoorehdeli</span><br />
-              <span class="text-sm text-slate-500">Fall 2023</span>
-              <a href="https://github.com/MJAHMADEE/MachineLearning2023" class="inline-block ml-2">
-                <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-          <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
-            <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
-            <div>
-              <a href="https://github.com/MJAHMADEE/MachineLearning2023" class="text-lg font-semibold underline">
-                Fundamentals of Intelligent Systems
-              </a>
-              <span class="text-sm text-slate-500">— Dr. Mahdi Aliyari-Shoorehdeli</span><br />
-              <span class="text-sm text-slate-500">Fall 2023</span>
-              <a href="https://github.com/MJAHMADEE/MachineLearning2023" class="inline-block ml-2">
-                <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-          <!-- Spring 2023 -->
-          <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
-            <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
-            <div>
-              <a href="https://github.com/MJAHMADEE/Machine-Learning-and-Fault-Detection" class="text-lg font-semibold underline">
-                Fault Detection & Diagnosis
-              </a>
-              <span class="text-sm text-slate-500">— Dr. Mahdi Aliyari-Shoorehdeli</span><br />
-              <span class="text-sm text-slate-500">Spring 2023</span>
-              <a href="https://github.com/MJAHMADEE/Machine-Learning-and-Fault-Detection" class="inline-block ml-2">
-                <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-          <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
-            <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
-            <div>
-              <a href="https://github.com/MJAHMADEE/Industrial_Control_Course" class="text-lg font-semibold underline">
-                Industrial Control
-              </a>
-              <span class="text-sm text-slate-500">— Prof. Hamid D. Taghirad</span><br />
-              <span class="text-sm text-slate-500">Spring 2023</span>
-              <a href="https://github.com/MJAHMADEE/Industrial_Control_Course" class="inline-block ml-2">
-                <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-          <!-- Spring 2022 -->
-          <div class="bg-gray-50 shadow rounded-lg p-6 flex items-start gap-4 hover:shadow-lg transition">
-            <img src="https://mjahmadee.github.io/Images/kntu.png" alt="KNTU" class="w-12 h-12" />
-            <div>
-              <a href="https://github.com/aras-labs/Robotics" class="text-lg font-semibold underline">
-                Robotics
-              </a>
-              <span class="text-sm text-slate-500">— Prof. Hamid D. Taghirad</span><br />
-              <span class="text-sm text-slate-500">Spring 2022</span>
-              <a href="https://github.com/aras-labs/Robotics" class="inline-block ml-2">
-                <img src="https://mjahmadee.github.io/Images/git1.png" alt="Repo" class="w-5 h-5" />
-              </a>
-            </div>
-          </div>
+              <span class="ml-auto text-sm text-slate-500">2022 – Present</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Books -->
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+            📚 Books
+          </h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <img src="https://mjahmadee.github.io/Images/book.png" alt="Book" class="w-8 h-8" />
+              <div>
+                <a href="https://aras.kntu.ac.ir/publications/books/robotics/" class="font-semibold underline">
+                  An Introduction to Robotics
+                </a>
+                <span class="text-sm text-slate-500">— 2023</span><br />
+                Contributed educational content alongside Prof. Hamid D. Taghirad & Dr. MohammadAzam Khosravi.
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <img src="https://mjahmadee.github.io/Images/book.png" alt="Book" class="w-8 h-8" />
+              <div>
+                <a href="https://github.com/aras-labs/Fundamentals_of_Robotics/" class="font-semibold underline">
+                  Fundamentals of Robotics
+                </a>
+                <span class="text-sm text-slate-500">— 2024</span><br />
+                Assisted in creating core robotics curriculum materials.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Research Grants -->
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+            💰 Research Grants
+          </h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <img src="https://mjahmadee.github.io/Images/Dollar.png" alt="Grant" class="w-8 h-8" />
+              <div>
+                <span class="font-semibold">INSF & NIMAD Joint Grant (#4002766 & #4001190)</span>
+                <span class="text-sm text-slate-500">— 2022</span><br />
+                Title: AI-based surgical skill assessment of capsulorhexis surgery by development of a comprehensive video dataset.
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <img src="https://mjahmadee.github.io/Images/Dollar.png" alt="Grant" class="w-8 h-8" />
+              <div>
+                <span class="font-semibold">National Center for Strategic Research in Medical Education (#4010324)</span>
+                <span class="text-sm text-slate-500">— 2024</span><br />
+                Title: Augmented reality surgical capsulorhexis simulator.
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -617,9 +1186,68 @@
   <!-- Honors & Awards -->
   <section id="honors" class="py-20 bg-gray-50">
     <div class="max-w-screen-lg mx-auto px-6" data-aos="fade-up">
-      <h2 class="text-4xl font-bold mb-8 text-center uppercase tracking-wide">🏅 Honors & Awards</h2>
+      <h2 class="text-4xl font-bold mb-8 text-center uppercase tracking-wide">
+        🏅 Honors & Awards
+      </h2>
       <div class="grid md:grid-cols-2 gap-8">
-        <!-- Honors cards as before... -->
+        <div class="bg-white shadow rounded-2xl p-6 flex items-start gap-4 hover:shadow-lg transition">
+          <i class="fa-solid fa-award text-yellow-500 text-3xl mt-1"></i>
+          <div>
+            <a
+              href="https://drive.google.com/file/d/1NHqhuQfyaiDHQpU-UM9TNd1VhI6C-h-A/view"
+              class="font-semibold underline"
+              >Recognized as a Top 5% Peer Reviewer for JAMA Network Open in 2024</a
+            >
+            <div class="text-sm text-slate-500">Winter 2024</div>
+          </div>
+        </div>
+        <div class="bg-white shadow rounded-2xl p-6 flex items-start gap-4 hover:shadow-lg transition">
+          <i class="fa-solid fa-trophy text-blue-500 text-3xl mt-1"></i>
+          <div>
+            <a
+              href="https://ee.kntu.ac.ir/page-show334/fa/8/news/26067-..."
+              class="font-semibold underline"
+              >First-Place Selection by the Faculty of Electrical and Computer Engineering for PhD Project</a
+            >
+            <div class="text-sm text-slate-500">Winter 2024</div>
+          </div>
+        </div>
+        <div class="bg-white shadow rounded-2xl p-6 flex items-start gap-4 hover:shadow-lg transition">
+          <i class="fa-solid fa-medal text-green-500 text-3xl mt-1"></i>
+          <div>
+            <div class="font-semibold">
+              Ranked 9<sup>th</sup> Nationally in PhD Entrance Exam in Control Engineering
+            </div>
+            <div class="text-sm text-slate-500">Summer 2022</div>
+          </div>
+        </div>
+        <div class="bg-white shadow rounded-2xl p-6 flex items-start gap-4 hover:shadow-lg transition">
+          <i class="fa-solid fa-star text-pink-500 text-3xl mt-1"></i>
+          <div>
+            <div class="font-semibold">
+              Ranked 1<sup>st</sup> in The 6th Festival of Selected Seminars in ECE
+            </div>
+            <div class="text-sm text-slate-500">Feb. 2021</div>
+          </div>
+        </div>
+        <div class="bg-white shadow rounded-2xl p-6 flex items-start gap-4 hover:shadow-lg transition">
+          <i class="fa-solid fa-project-diagram text-orange-500 text-3xl mt-1"></i>
+          <div>
+            <div class="font-semibold">
+              Among the Top 10 Projects in the B.Sc. Program at Amirkabir University of Technology
+            </div>
+            <div class="text-sm text-slate-500">Summer 2019</div>
+          </div>
+        </div>
+        <div class="bg-white shadow rounded-2xl p-6 flex items-start gap-4 hover:shadow-lg transition">
+          <i class="fa-solid fa-percent text-red-500 text-3xl mt-1"></i>
+          <div>
+            <div class="font-semibold">
+              Ranked among Top 0.1% in Iran's National University Entrance Exam (over 180,000 participants)
+            </div>
+            <div class="text-sm text-slate-500">Summer 2015</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -627,9 +1255,24 @@
   <!-- Language Skills -->
   <section id="languages" class="py-20 bg-white">
     <div class="max-w-screen-lg mx-auto px-6" data-aos="fade-up">
-      <h2 class="text-4xl font-bold mb-8 text-center uppercase tracking-wide">🌐 Language Skills</h2>
+      <h2 class="text-4xl font-bold mb-8 text-center uppercase tracking-wide">
+        🌐 Language Skills
+      </h2>
       <div class="flex flex-col md:flex-row gap-8 justify-center">
-        <!-- Language cards as before... -->
+        <div class="bg-gray-50 shadow rounded-2xl p-6 flex items-center gap-4 hover:shadow-lg transition">
+          <i class="fa-solid fa-language text-3xl text-indigo-500"></i>
+          <div>
+            <div class="font-semibold">Persian</div>
+            <div class="text-sm text-slate-500">Native</div>
+          </div>
+        </div>
+        <div class="bg-gray-50 shadow rounded-2xl p-6 flex items-center gap-4 hover:shadow-lg transition">
+          <i class="fa-solid fa-globe text-3xl text-green-500"></i>
+          <div>
+            <div class="font-semibold">English</div>
+            <div class="text-sm text-slate-500">Fluent — MSRT Score: 80/100</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -637,15 +1280,40 @@
   <!-- Certificates -->
   <section id="certificates" class="py-20 bg-gray-50">
     <div class="max-w-screen-lg mx-auto px-6" data-aos="fade-up">
-      <h2 class="text-4xl font-bold mb-8 text-center uppercase tracking-wide">📜 Certificates</h2>
+      <h2 class="text-4xl font-bold mb-8 text-center uppercase tracking-wide">
+        📜 Certificates
+      </h2>
       <div class="grid sm:grid-cols-2 gap-8">
-        <!-- Certificate cards as before... -->
+        <a
+          href="https://www.coursera.org/account/accomplishments/certificate/27H94GEHRAKE"
+          class="flex items-center gap-4 bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition"
+        >
+          <img
+            src="https://mjahmadee.github.io/Images/coursera.png"
+            alt="Coursera"
+            class="w-10 h-10"
+          />
+          <span class="font-semibold">Structuring Machine Learning Projects</span>
+        </a>
+        <a
+          href="https://www.coursera.org/account/accomplishments/certificate/JKQ3Y88ZWKP9"
+          class="flex items-center gap-4 bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition"
+        >
+          <img
+            src="https://mjahmadee.github.io/Images/coursera.png"
+            alt="Coursera"
+            class="w-10 h-10"
+          />
+          <span class="font-semibold">Neural Networks and Deep Learning</span>
+        </a>
       </div>
       <div class="mt-6 text-center">
         <i class="fa-globe fa-solid text-2xl align-middle mr-2"></i>
-        <a href="https://mjahmadee.site123.me/#section-5e8dce1492e0f" class="underline text-blue-600 hover:text-blue-800">
-          More on Personal Website
-        </a>
+        <a
+          href="https://mjahmadee.site123.me/#section-5e8dce1492e0f"
+          class="underline text-blue-600 hover:text-blue-800"
+          >More on Personal Website</a
+        >
       </div>
     </div>
   </section>
@@ -653,9 +1321,42 @@
   <!-- Selected Course Grades -->
   <section id="grades" class="py-20 bg-white">
     <div class="max-w-screen-lg mx-auto px-6" data-aos="fade-up">
-      <h2 class="text-4xl font-bold mb-8 text-center uppercase tracking-wide">📚 Selected Course Grades</h2>
+      <h2 class="text-4xl font-bold mb-8 text-center uppercase tracking-wide">
+        📚 Selected Course Grades
+      </h2>
       <div class="grid md:grid-cols-2 gap-12">
-        <!-- Grades lists as before... -->
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">Graduate</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><a href="https://ut.ac.ir/en" class="underline">Deep Learning</a>: 20.0/20</li>
+            <li><a href="https://en.kntu.ac.ir/" class="underline">Soft Computing</a>: 20.0/20</li>
+            <li><a href="https://en.kntu.ac.ir/" class="underline">Model Predictive Control</a>: 20.0/20</li>
+            <li><a href="https://en.kntu.ac.ir/" class="underline">Bio-Mechatronic Systems</a>: 20.0/20</li>
+            <li><a href="https://en.kntu.ac.ir/" class="underline">Parallel Robots</a>: 19.5/20</li>
+            <li><a href="https://aut.ac.ir/en" class="underline">Advanced Robotics</a>: 18.0/20</li>
+            <li><a href="https://en.kntu.ac.ir/" class="underline">Optimal Control</a>: 19.5/20</li>
+            <li><a href="https://en.kntu.ac.ir/" class="underline">Large-Scale Systems</a>: 19.0/20</li>
+            <li><a href="https://en.kntu.ac.ir/" class="underline">Nonlinear Control Systems</a>: 18.5/20</li>
+            <li><a href="https://en.kntu.ac.ir/" class="underline">Fault Detection & Diagnosis</a>: 18.5/20</li>
+            <li><a href="https://aut.ac.ir/en" class="underline">Industrial Internet of Things (IIoT)</a>: 18.5/20</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">Undergraduate</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><a href="https://aut.ac.ir/en" class="underline">Instrumentation</a>: 20.0/20</li>
+            <li><a href="https://aut.ac.ir/en" class="underline">Linear Algebra</a>: 20.0/20</li>
+            <li><a href="https://aut.ac.ir/en" class="underline">Modern Control</a>: 19.5/20</li>
+            <li><a href="https://aut.ac.ir/en" class="underline">Numerical Analysis</a>: 19.5/20</li>
+            <li><a href="https://aut.ac.ir/en" class="underline">Computational Intelligence</a>: 19.0/20</li>
+            <li><a href="https://aut.ac.ir/en" class="underline">Industrial Control</a>: 18.0/20</li>
+            <li><a href="https://aut.ac.ir/en" class="underline">Linear Control Systems</a>: 18.0/20</li>
+            <li><a href="https://aut.ac.ir/en" class="underline">Electronic (III)</a>: 20.0/20</li>
+            <li><a href="https://aut.ac.ir/en" class="underline">Logic Circuits</a>: 18.5/20</li>
+            <li><a href="https://aut.ac.ir/en" class="underline">Power Systems Analysis</a>: 19.0/20</li>
+            <li><a href="https://aut.ac.ir/en" class="underline">Electrical Machines</a>: 18.0/20</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -665,7 +1366,13 @@
     <div class="max-w-screen-lg mx-auto px-6" data-aos="fade-up">
       <h2 class="text-3xl font-bold mb-6">📝 Short Biography</h2>
       <p class="leading-relaxed text-lg">
-        Mohammad Javad Ahmadi was born in 1996 in Sari near the Caspian Sea, Iran. He graduated from NODET in 2015 with a 4/4 diploma, earned his B.Sc. from Amirkabir University in 2019 (GPA 3.7/4), and completed his M.Sc. at KNTU in 2022 (GPA 4/4). He’s currently a Ph.D. candidate under Prof. Hamid D. Taghirad (GPA 4/4), CTO at MediversAI & SmarTeeth, and leads the ARAS AI, VR & Software Group. His research passions are Robotics, Artificial Intelligence, and Computer Vision.
+        Mohammad Javad Ahmadi was born in 1996 in Sari near the Caspian Sea,
+        Iran. He graduated from NODET in 2015 with a 4/4 diploma, earned his
+        B.Sc. from Amirkabir University in 2019 (GPA 3.7/4), and completed his
+        M.Sc. at KNTU in 2022 (GPA 4/4). He’s currently a Ph.D. candidate under
+        Prof. Hamid D. Taghirad (GPA 4/4), CTO at MediversAI & SmarTeeth, and
+        leads the ARAS AI, VR & Software Group. His main research interests
+        include Robotics, Artificial Intelligence, and Computer Vision.
       </p>
     </div>
   </section>
@@ -681,26 +1388,58 @@
         action="https://formspree.io/f/yourFormID"
         method="POST"
         class="max-w-md mx-auto space-y-4"
-        data-aos="fade-up" data-aos-delay="100"
+        data-aos="fade-up"
+        data-aos-delay="100"
       >
-        <input type="text" name="Name" placeholder="Your Name" required
-          class="w-full px-4 py-3 rounded-full bg-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        <input type="email" name="Email" placeholder="Your Email" required
-          class="w-full px-4 py-3 rounded-full bg-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        <input type="text" name="Subject" placeholder="Subject"
-          class="w-full px-4 py-3 rounded-full bg-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        <textarea name="Message" rows="5" placeholder="Your Message" required
-          class="w-full px-4 py-3 rounded-xl bg-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-        <button type="submit"
-          class="w-full bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full shadow-lg font-semibold transition">
+        <input
+          type="text"
+          name="Name"
+          placeholder="Your Name"
+          required
+          class="w-full px-4 py-3 rounded-full bg-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <input
+          type="email"
+          name="Email"
+          placeholder="Your Email"
+          required
+          class="w-full px-4 py-3 rounded-full bg-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <input
+          type="text"
+          name="Subject"
+          placeholder="Subject"
+          class="w-full px-4 py-3 rounded-full bg-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <textarea
+          name="Message"
+          rows="5"
+          placeholder="Your Message"
+          required
+          class="w-full px-4 py-3 rounded-xl bg-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        ></textarea>
+        <button
+          type="submit"
+          class="w-full bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full shadow-lg font-semibold transition"
+        >
           Send Message
         </button>
       </form>
-      <div class="mt-8 flex justify-center gap-6" data-aos="fade-up" data-aos-delay="200">
-        <a href="https://www.linkedin.com/in/mjahmadi" class="text-slate-200 hover:text-blue-500 text-2xl">
-          <i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/mjahmadee" class="text-slate-200 hover:text-white text-2xl">
-          <i class="fa-brands fa-github"></i></a>
+      <div
+        class="mt-8 flex justify-center gap-6"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <a
+          href="https://www.linkedin.com/in/mjahmadi"
+          class="text-slate-200 hover:text-blue-500 text-2xl"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a
+          href="https://github.com/mjahmadee"
+          class="text-slate-200 hover:text-white text-2xl"
+          ><i class="fa-brands fa-github"></i
+        ></a>
       </div>
     </div>
   </section>
@@ -717,7 +1456,7 @@
     // Initialize AOS
     AOS.init({ once: true, duration: 800 });
 
-    // Typed.js
+    // Typed.js for hero subtitle
     new Typed('#typed', {
       strings: ['AI Engineer', 'Computer Vision Researcher', 'CTO at MediversAI'],
       typeSpeed: 80,
@@ -725,31 +1464,40 @@
       loop: true
     });
 
-    // Navbar toggle
-    document.getElementById('menuBtn').addEventListener('click', () => {
-      document.getElementById('navList').classList.toggle('hidden');
-    });
+    // Navbar toggle for mobile
+    document.getElementById('menuBtn').addEventListener('click', () =>
+      document.getElementById('navList').classList.toggle('hidden')
+    );
 
-    // Publications filter
-    document.addEventListener('DOMContentLoaded', () => {
-      const searchInput = document.getElementById('pub-search');
-      const selectCount = document.getElementById('pub-count');
+    // Publications filtering
+    document.querySelectorAll('.btn-count').forEach(btn => {
+      btn.addEventListener('click', e => {
+        document.querySelectorAll('.btn-count').forEach(b =>
+          b.classList.remove('bg-blue-500','text-white')
+        );
+        btn.classList.add('bg-blue-500','text-white');
+        renderPublications();
+      });
+    });
+    document.getElementById('pub-search').addEventListener('input', renderPublications);
+
+    function renderPublications() {
+      const q = document.getElementById('pub-search').value.toLowerCase();
+      const count = document.querySelector('.btn-count.bg-blue-500')?.dataset.count || '10';
+      const rows = Array.from(document.querySelectorAll('#pub-table tbody tr'));
+      let filtered = rows.filter(r =>
+        r.querySelector('td:nth-child(2)').innerText.toLowerCase().includes(q)
+      );
+      if (count !== 'all') filtered = filtered.slice(0, parseInt(count));
       const tbody = document.querySelector('#pub-table tbody');
-      const rows = Array.from(tbody.querySelectorAll('tr'));
-      function render() {
-        const q = searchInput.value.toLowerCase();
-        let filtered = rows.filter(r => r.querySelector('td:nth-child(2)').innerText.toLowerCase().includes(q));
-        const c = selectCount.value;
-        if (c !== 'all') filtered = filtered.slice(0, +c);
-        tbody.innerHTML = '';
-        filtered.forEach(r => tbody.appendChild(r));
-      }
-      searchInput.addEventListener('input', render);
-      selectCount.addEventListener('change', render);
-      render();
-    });
+      tbody.innerHTML = '';
+      filtered.forEach(r => tbody.appendChild(r));
+    }
+    // Initialize default
+    document.querySelector('.btn-count[data-count="10"]').classList.add('bg-blue-500','text-white');
+    renderPublications();
 
-    // Footer year
+    // Update footer year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
