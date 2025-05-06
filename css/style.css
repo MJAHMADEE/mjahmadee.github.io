@@ -1,12 +1,7 @@
 
-.hero{
-  background-image:url('../Images/main.jpg');
-  background-size:cover;
-  background-position:center;
-}
-.hero::after{
-  content:'';
-  position:absolute;inset:0;background:rgba(0,0,0,0.55);
-}
-.section-title{ @apply text-3xl font-bold mb-8 text-center;}
-.item-card{ @apply bg-white shadow rounded-lg p-6 hover:-translate-y-1 transition;}
+.hero { background: url('../Images/main.jpg') center/cover no-repeat; position: relative; }
+.hero::after { content: ''; position:absolute; inset:0; background: rgba(0,0,0,0.6); }
+.section-title { @apply text-3xl font-bold mb-8 text-center; }
+.item-card { @apply bg-white shadow rounded-lg p-6 hover:-translate-y-1 transition; }
+.details { display:none; }
+.toggle-btn { @apply text-blue-600 hover:underline cursor-pointer mt-2; }
