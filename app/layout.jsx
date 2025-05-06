@@ -10,9 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <AnimatePresence mode="wait">
-          {children}
-        </AnimatePresence>
+        <AnimatePresence mode="wait">{children}</AnimatePresence>
       </body>
     </html>
   );
