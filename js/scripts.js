@@ -1,23 +1,27 @@
 
-document.addEventListener('DOMContentLoaded', ()=>{
-  AOS.init({once:true,duration:800,offset:80});
-  new Typed('#typed',{strings:[
-    'AI Engineer','Computer Vision Specialist','PhD Researcher','Software Architect'
-  ],typeSpeed:60,backSpeed:30,backDelay:1400,loop:true});
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialize AOS
+  AOS.init({ once: true, duration: 800 });
 
-  // Mobile menu
-  document.getElementById('menuBtn').addEventListener('click',()=>{
-    document.getElementById('navList').classList.toggle('hidden');
+  // Typed.js
+  new Typed('#typed-text', {
+    strings: ['AI Engineer', 'Computer Vision Specialist', 'PhD Researcher', 'Software Architect'],
+    typeSpeed: 60, backSpeed: 30, backDelay: 1400, loop: true
   });
 
-  // Toggles
-  document.querySelectorAll('.toggle-btn').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      let target=document.getElementById(btn.dataset.target);
-      if(!target) return;
-      const expanded=target.style.display==='block';
-      target.style.display=expanded?'none':'block';
-      btn.textContent= expanded? 'Show More' : 'Show Less';
+  // Mobile menu toggle
+  document.getElementById('menu-btn').addEventListener('click', () => {
+    document.getElementById('nav-links').classList.toggle('hidden');
+  });
+
+  // Toggle extra details
+  document.querySelectorAll('.toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = document.getElementById(btn.dataset.target);
+      if (!target) return;
+      const isHidden = target.classList.contains('hidden');
+      target.classList.toggle('hidden', !isHidden);
+      btn.textContent = isHidden ? 'Show Less' : 'Show More';
     });
   });
 });
