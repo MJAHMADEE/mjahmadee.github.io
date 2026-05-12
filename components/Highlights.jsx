@@ -119,33 +119,7 @@ export default function Highlights() {
           ))}
         </motion.div>
 
-        {/* Quick Stats Section */}
-        <motion.div
-          className="mt-16 p-8 bg-gradient-to-r from-blue-600/5 to-purple-600/5 rounded-2xl border border-blue-200"
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Stats</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { number: "8+", label: "Years in AI", icon: "📚" },
-              { number: "67+", label: "Direct Mentees", icon: "👥" },
-              { number: "17+", label: "Publications", icon: "📖" },
-              { number: "3+", label: "Tech Startups", icon: "🚀" }
-            ].map((stat, idx) => (
-              <motion.div
-                key={idx}
-                className="text-center"
-                whileHover={{ scale: 1.05 }}
-              >
-                <p className="text-2xl mb-1">{stat.icon}</p>
-                <p className="text-3xl font-bold text-blue-600">{stat.number}</p>
-                <p className="text-gray-600 text-sm mt-1">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+
       </motion.div>
     </section>
   );
