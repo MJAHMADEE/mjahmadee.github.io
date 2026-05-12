@@ -1,53 +1,88 @@
-# Personal Academic Portfolio – MJ Ahmadi
+# Mohammad Javad Ahmadi - Portfolio Website
 
-Welcome to the official repository for my **Personal Academic Portfolio Website**, professionally crafted using Tailwind CSS and JavaScript to showcase my academic, research, and professional experiences in AI, computer vision, and robotics.
+A modern, responsive portfolio website built with Next.js, React, Tailwind CSS, and Framer Motion.
 
-## 🌐 Live Website
-You can view the portfolio at: [https://mjahmadee.github.io/](https://mjahmadee.github.io/)
+## 🚀 Features
 
-## 📁 Project Structure
+- **Modern Stack**: Next.js 14, React 18, Tailwind CSS, Framer Motion
+- **Responsive Design**: Fully responsive across all devices
+- **Smooth Animations**: Engaging animations and transitions with Framer Motion
+- **SEO Optimized**: Comprehensive metadata and Open Graph tags
+- **Client-Side Rendering**: Dynamic components with smooth interactions
+- **Deployed on GitHub Pages**: Automated CI/CD with GitHub Actions
 
+## 📋 Sections
+
+1. **Navigation** - Fixed header with smooth navigation
+2. **Hero** - Eye-catching introduction with CTA buttons
+3. **About** - Professional overview with key strengths
+4. **Highlights** - Key achievements and quick stats
+5. **Experience** - Timeline of work experience
+6. **Education** - Academic background
+7. **Skills** - Technical skills by category
+8. **Projects** - Portfolio of major projects
+9. **Teaching** - Mentorship and course contributions
+10. **Research Grants** - Research funding and grants
+11. **Publications** - Academic publications with filtering
+12. **Awards** - Recognition and awards
+13. **Contact** - Multiple contact channels
+
+## 🛠 Development
+
+### Install dependencies
+```bash
+npm install
 ```
-.
-├── index.html               # Main HTML file
-├── Images/                  # Contains logos and image assets
-├── MJAhmadi_CV/             # LaTeX and PDF version of the CV
-├── README.md                # Project documentation (this file)
+
+### Run development server
+```bash
+npm run dev
 ```
 
-## ✨ Features
+Open [http://localhost:3000](http://localhost:3000) to view the website.
 
-- Elegant landing banner with animated typing effects
-- Full academic profile, including:
-  - 📌 Career highlights
-  - 🎓 Education and grades
-  - 💼 Experience & selected projects
-  - 📚 Publications (sortable with search functionality)
-  - 🧠 Technical skills & certificates
-  - ✉️ Contact form
-- Fully responsive design (mobile-friendly)
-- Optimized with Tailwind CSS & AOS (Animate on Scroll)
+### Build for production
+```bash
+npm run build
+```
 
-## 🛠️ Built With
+### Export as static site
+```bash
+npm run export
+```
 
-- [Tailwind CSS](https://tailwindcss.com/)
-- [AOS Animation](https://michalsnik.github.io/aos/)
-- [Typed.js](https://github.com/mattboldt/typed.js/)
-- [Font Awesome](https://fontawesome.com/)
-- HTML5, CSS3, JavaScript
+Generated files will be in the `out/` directory.
 
-## 🧑‍💼 Author
+## 📦 Dependencies
 
-**Mohammad Javad Ahmadi**  
-PhD Candidate in AI & CV  
-CTO of [MediversAI](https://www.mediversai.com/)  
-[LinkedIn](https://www.linkedin.com/in/mjahmadi) | [GitHub](https://github.com/MJAHMADEE)
+- **next**: Next.js framework
+- **react**: React library
+- **react-dom**: React DOM
+- **tailwindcss**: CSS framework
+- **framer-motion**: Animation library
+- **lucide-react**: Icon library
+- **postcss**: CSS processing
+- **autoprefixer**: Vendor prefixes
 
-## 📬 Contact
+## 🚀 Deployment
 
-Feel free to reach out for collaborations or discussions:  
-📧 mjahmadee@gmail.com
+The site is automatically deployed to GitHub Pages whenever changes are pushed to the main branch. The deployment is handled by GitHub Actions (`.github/workflows/deploy.yml`).
+
+### Manual deployment
+```bash
+npm run build
+npm run export
+```
+
+Then commit and push the exported files in the `out/` directory.
 
 ## 📄 License
 
-This project is open-source and free to use under the [MIT License](https://choosealicense.com/licenses/mit/).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👤 Author
+
+Mohammad Javad Ahmadi - CTO & AI Engineer
+- [LinkedIn](https://linkedin.com/in/mjahmadi)
+- [GitHub](https://github.com/MJAHMADEE)
+- [Email](mailto:mjahmadee@gmail.com)
