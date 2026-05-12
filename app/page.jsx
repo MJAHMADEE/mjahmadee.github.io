@@ -16,10 +16,10 @@ import Contact from '../components/Contact';
 
 export default function Home() {
   return (
-    <main className="bg-white">
+    <main className="bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 min-h-screen">
       <Navigation />
       <Hero />
-      <div className="space-y-24 px-6 md:px-16 lg:px-32 py-12">
+      <div className="space-y-32 px-6 md:px-16 lg:px-32 py-16">
         <About />
         <Highlights />
         <Experience />

@@ -24,13 +24,13 @@ export default function Navigation() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-white/20 shadow-sm">
       <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-32">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <motion.a
             href="#"
-            className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600"
+            className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 hover:scale-105"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -43,10 +43,11 @@ export default function Navigation() {
               <motion.a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
+                className="text-sm font-medium text-slate-700 hover:text-blue-600 transition-colors relative group"
                 whileHover={{ y: -2 }}
               >
                 {item.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
               </motion.a>
             ))}
           </div>
@@ -63,7 +64,7 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         <motion.div
-          className="lg:hidden overflow-hidden"
+          className="lg:hidden overflow-hidden bg-white/50 backdrop-blur-sm"
           initial={{ height: 0, opacity: 0 }}
           animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
           transition={{ duration: 0.3 }}

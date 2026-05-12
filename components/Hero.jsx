@@ -129,12 +129,12 @@ export default function Hero() {
             Explore My Work
           </motion.a>
           <motion.a
-            href="https://drive.google.com/file/d/your-cv-id/view"
-            className="px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+            href="https://drive.google.com/file/d/12mfH_QxeocmGwL8oAGfFRh2LZSZSlrwE/view?usp=sharing"
+            className="px-8 py-3 border-2 border-purple-600 text-purple-600 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Download CV
+            Download Resume
           </motion.a>
         </motion.div>
 
