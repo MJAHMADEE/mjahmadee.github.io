@@ -3,6 +3,12 @@ module.exports = {
     './app/**/*.{js,jsx,ts,tsx}',
     './components/**/*.{js,jsx,ts,tsx}'
   ],
-  theme: { extend: {} },
+  theme: { 
+    extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      }
+    } 
+  },
   plugins: []
 };

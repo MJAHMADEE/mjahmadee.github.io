@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Linkedin, Github, Mail, ArrowDown, Code2, Brain, Zap, Sparkles, Cpu, Rocket } from 'lucide-react';
+import InteractiveNetwork from './InteractiveNetwork';
 
 export default function Hero() {
   const container = {
@@ -33,61 +34,20 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden pt-24 pb-20">
-      {/* Enhanced animated gradient background */}
-      <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/40 to-slate-900"
-      />
+      {/* Base dark background with subtle gradient */}
+      <div className="absolute inset-0 bg-slate-950" />
       
-      {/* Animated mesh gradient effect */}
-      <motion.div
-        className="absolute inset-0 opacity-40"
-        animate={{ 
-          backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"]
-        }}
-        transition={{
-          duration: 15,
-          repeat: Infinity,
-          repeatType: "loop",
-          ease: "easeInOut"
-        }}
-        style={{
-          backgroundImage: `
-            linear-gradient(45deg, transparent 25%, rgba(59, 130, 246, 0.1) 25%, rgba(59, 130, 246, 0.1) 50%, transparent 50%, transparent 75%, rgba(59, 130, 246, 0.1) 75%),
-            linear-gradient(-45deg, transparent 25%, rgba(147, 51, 234, 0.1) 25%, rgba(147, 51, 234, 0.1) 50%, transparent 50%, transparent 75%, rgba(147, 51, 234, 0.1) 75%)
-          `,
-          backgroundSize: "60px 60px"
-        }}
-      />
+      {/* Soft gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-950/20 via-slate-950 to-purple-950/10" />
       
-      {/* Animated floating gradient orbs - Enhanced */}
-      <motion.div
-        className="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl opacity-20"
-        animate={{ y: [-50, 50, -50], x: [0, 50, 0], rotate: [0, 180, 360] }}
-        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500 rounded-full mix-blend-screen filter blur-3xl opacity-15"
-        animate={{ y: [50, -50, 50], x: [0, -50, 0], rotate: [360, 180, 0] }}
-        transition={{ duration: 22, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-      />
-      <motion.div
-        className="absolute top-1/2 right-1/3 w-80 h-80 bg-pink-400 rounded-full mix-blend-screen filter blur-3xl opacity-10"
-        animate={{ y: [0, 80, 0], x: [0, 80, 0] }}
-        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-      />
+      {/* Interactive Network Background */}
+      <InteractiveNetwork />
       
-      {/* Animated grid lines for tech aesthetic */}
-      <motion.svg
-        className="absolute inset-0 w-full h-full opacity-10"
-        style={{ pointerEvents: "none" }}
-      >
-        <defs>
-          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgb(59, 130, 246)" strokeWidth="0.5"/>
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#grid)" />
-      </motion.svg>
+      {/* Top radial light effect */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-radial from-blue-500/15 via-transparent to-transparent blur-3xl" />
+      
+      {/* Bottom gradient overlay for smooth section transition */}
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent pointer-events-none" />
 
       {/* Content */}
       <motion.div
