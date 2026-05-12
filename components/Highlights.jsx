@@ -150,12 +150,3 @@ export default function Highlights() {
     </section>
   );
 }
-            <Card className="shadow-lg rounded-2xl p-4">
-              <CardContent>{text}</CardContent>
-            </Card>
-          </motion.div>
-        ))}
-      </div>
-    </section>
-  );
-}

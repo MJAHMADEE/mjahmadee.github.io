@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-import { AnimatePresence } from 'framer-motion';
+import LayoutWrapper from '../components/LayoutWrapper';
 
 export const metadata = {
   title: 'Mohammad Javad Ahmadi - CTO & AI Engineer | MediversAI & ARAS Lab',
@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body className="antialiased">
-        <AnimatePresence mode="wait">{children}</AnimatePresence>
+        <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>
   );

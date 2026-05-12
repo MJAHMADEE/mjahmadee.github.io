@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Linkedin, GitHub, Mail, ArrowDown, Code2, Brain, Zap } from 'lucide-react';
+import { Linkedin, Github, Mail, ArrowDown, Code2, Brain, Zap } from 'lucide-react';
 
 export default function Hero() {
   const container = {
@@ -142,7 +142,7 @@ export default function Hero() {
         <motion.div variants={item} className="flex justify-center gap-6 pt-8">
           {[
             { icon: Linkedin, href: "https://linkedin.com/in/mjahmadi", label: "LinkedIn" },
-            { icon: GitHub, href: "https://github.com/MJAHMADEE", label: "GitHub" },
+            { icon: Github, href: "https://github.com/MJAHMADEE", label: "GitHub" },
             { icon: Mail, href: "mailto:mjahmadee@gmail.com", label: "Email" }
           ].map((social, idx) => (
             <motion.a
