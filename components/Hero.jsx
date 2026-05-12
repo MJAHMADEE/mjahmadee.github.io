@@ -267,27 +267,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </motion.div>
-      {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <motion.div className="flex flex-col items-center gap-2">
-          <span className="text-sm text-gray-600 font-medium">Scroll to explore</span>
-          <motion.div
-            className="w-6 h-10 border-2 border-gray-400 rounded-full flex items-center justify-center"
-            animate={{ borderColor: [`rgb(156, 163, 175)`, `rgb(59, 130, 246)`, `rgb(156, 163, 175)`] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            <motion.div
-              className="w-1 h-2 bg-blue-500 rounded-full"
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            />
-          </motion.div>
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

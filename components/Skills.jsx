@@ -184,63 +184,103 @@ export default function Skills() {
           ))}
         </motion.div>
 
-        {/* Proficiency Levels */}
+        {/* Proficiency Levels - Professional Design */}
         <motion.div
-          className="relative p-8 bg-white/60 backdrop-blur-md rounded-2xl border border-white/40 overflow-hidden"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          whileHover={{ boxShadow: "0 25px 50px rgba(0,0,0,0.1)" }}
+          className="space-y-8"
         >
-          {/* Animated background */}
-          <motion.div 
-            className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5"
-            animate={{ backgroundPosition: ["0% 0%", "100% 100%"] }}
-            transition={{ duration: 15, repeat: Infinity, repeatType: "reverse" }}
-            style={{ backgroundSize: "200% 200%" }}
-          />
-          
-          <div className="relative z-10">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Proficiency Levels</h3>
-            <div className="space-y-5">
-              {[
-                { label: "Expert", icon: "⭐⭐⭐", tools: "Python, PyTorch, Deep Learning, Surgical Video Analysis, Medical Imaging", color: "from-blue-500 to-blue-600" },
-                { label: "Advanced", icon: "⭐⭐", tools: "TensorFlow, Computer Vision, Cloud Infrastructure, SaaS Architecture, Team Leadership", color: "from-purple-500 to-purple-600" },
-                { label: "Proficient", icon: "⭐", tools: "C/C++, MATLAB, SQL, Django, DevOps, Robotics, Fintech", color: "from-pink-500 to-pink-600" }
-              ].map((level, idx) => (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="space-y-2"
+          >
+            <h3 className="text-3xl font-bold text-gray-900">Expertise Framework</h3>
+            <p className="text-gray-600 text-lg">Organized by depth of experience and application scope</p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                level: "Expert",
+                description: "Deep mastery with 8+ years of production impact",
+                tools: ["Python", "PyTorch", "Deep Learning", "Surgical Video Analysis", "Medical Imaging"],
+                color: "from-blue-500 to-blue-600",
+                bgColor: "from-blue-50 to-blue-100/50",
+                accentColor: "text-blue-600",
+                borderColor: "border-blue-200"
+              },
+              {
+                level: "Advanced",
+                description: "Extensive experience with diverse real-world applications",
+                tools: ["TensorFlow", "Computer Vision", "Cloud Infrastructure", "SaaS Architecture", "Team Leadership"],
+                color: "from-purple-500 to-purple-600",
+                bgColor: "from-purple-50 to-purple-100/50",
+                accentColor: "text-purple-600",
+                borderColor: "border-purple-200"
+              },
+              {
+                level: "Proficient",
+                description: "Solid foundation with active development and research",
+                tools: ["C/C++", "MATLAB", "SQL", "Django", "DevOps", "Robotics"],
+                color: "from-emerald-500 to-emerald-600",
+                bgColor: "from-emerald-50 to-emerald-100/50",
+                accentColor: "text-emerald-600",
+                borderColor: "border-emerald-200"
+              }
+            ].map((proficiency, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.15, duration: 0.6 }}
+                whileHover={{ y: -8 }}
+                className={`relative group p-6 rounded-2xl border-2 ${proficiency.borderColor} bg-gradient-to-br ${proficiency.bgColor} hover:shadow-xl transition-all overflow-hidden`}
+              >
+                {/* Animated gradient background */}
                 <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.15, duration: 0.6 }}
-                  whileHover={{ x: 5 }}
-                  className="group relative"
-                >
-                  <div className="flex gap-4 p-4 rounded-xl hover:bg-blue-50/50 transition-colors">
-                    <motion.div 
-                      className="flex-shrink-0"
-                      whileHover={{ rotate: 10, scale: 1.2 }}
-                    >
-                      <span className={`px-4 py-2 rounded-full bg-gradient-to-r ${level.color} text-white text-sm font-bold shadow-lg`}>
-                        {level.label}
-                      </span>
-                    </motion.div>
-                    <div className="flex-1">
-                      <p className="text-gray-700 leading-relaxed font-medium">{level.tools}</p>
-                      <div className="mt-2 text-2xl">
-                        <motion.span
-                          animate={{ opacity: [0.5, 1, 0.5] }}
-                          transition={{ duration: 2, repeat: Infinity }}
-                        >
-                          {level.icon}
-                        </motion.span>
-                      </div>
+                  className={`absolute inset-0 bg-gradient-to-br ${proficiency.color} opacity-0 group-hover:opacity-5 transition-opacity`}
+                  animate={{ rotate: [0, 360] }}
+                  transition={{ duration: 20, repeat: Infinity }}
+                />
+
+                <div className="relative z-10 space-y-4">
+                  {/* Level badge */}
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <h4 className={`text-2xl font-bold ${proficiency.accentColor} mb-1`}>{proficiency.level}</h4>
+                      <p className="text-sm text-gray-600 leading-relaxed">{proficiency.description}</p>
                     </div>
+                    {/* Visual indicator */}
+                    <motion.div
+                      className={`w-12 h-12 rounded-full bg-gradient-to-br ${proficiency.color} flex items-center justify-center text-white font-bold text-lg flex-shrink-0`}
+                      whileHover={{ scale: 1.1, rotate: 10 }}
+                    >
+                      {idx === 0 ? "⓵" : idx === 1 ? "⓶" : "⓷"}
+                    </motion.div>
                   </div>
-                </motion.div>
-              ))}
-            </div>
+
+                  {/* Skills tags */}
+                  <div className="flex flex-wrap gap-2 pt-3">
+                    {proficiency.tools.map((tool, toolIdx) => (
+                      <motion.span
+                        key={toolIdx}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3 + toolIdx * 0.05 }}
+                        className={`px-3 py-1 rounded-full text-xs font-semibold bg-white/60 ${proficiency.accentColor} border border-white/40 backdrop-blur-sm`}
+                      >
+                        {tool}
+                      </motion.span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </motion.div>
