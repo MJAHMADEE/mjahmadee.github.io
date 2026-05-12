@@ -182,74 +182,121 @@ export default function Projects() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="group"
-                whileHover={{ y: -8 }}
+                className="group relative"
+                whileHover={{ y: -12 }}
               >
-                <div className="h-full bg-white rounded-xl border border-gray-200 hover:border-blue-400 shadow-md hover:shadow-xl transition-all p-6 flex flex-col">
-                  {/* Icon and Category */}
-                  <div className="flex justify-between items-start mb-4">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <ProjectIcon className="w-6 h-6 text-blue-600" />
+                <motion.div 
+                  className="h-full bg-white/60 backdrop-blur-md rounded-2xl border border-white/40 hover:border-blue-300 shadow-lg hover:shadow-2xl transition-all p-6 flex flex-col overflow-hidden"
+                  whileHover={{ boxShadow: "0 25px 50px rgba(0,0,0,0.15)" }}
+                >
+                  {/* Background gradient animation */}
+                  <motion.div 
+                    className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity"
+                  />
+                  
+                  <div className="relative z-10">
+                    {/* Icon and Category */}
+                    <div className="flex justify-between items-start mb-6">
+                      <motion.div 
+                        className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-purple-500 text-white flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all"
+                        whileHover={{ scale: 1.15, rotate: 10 }}
+                      >
+                        <ProjectIcon className="w-7 h-7" />
+                      </motion.div>
+                      <motion.span 
+                        className="px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 text-gray-700 text-xs font-bold border border-blue-200"
+                        whileHover={{ scale: 1.1 }}
+                      >
+                        {project.category}
+                      </motion.span>
                     </div>
-                    <span className="px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold">
-                      {project.category}
-                    </span>
-                  </div>
 
-                  {/* Content */}
-                  <h3 className="text-2xl font-bold text-gray-900 mb-1">
-                    {project.title}
-                  </h3>
-                  <p className="text-purple-600 font-semibold text-lg mb-3">
-                    {project.subtitle}
-                  </p>
-                  <p className="text-gray-600 text-sm mb-4 flex-grow leading-relaxed">
-                    {project.description}
-                  </p>
+                    {/* Content */}
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-bold text-lg mb-4">
+                      {project.subtitle}
+                    </p>
+                    <p className="text-gray-600 text-sm mb-5 flex-grow leading-relaxed">
+                      {project.description}
+                    </p>
 
-                  {/* Achievements */}
-                  <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-4 mb-4 border border-blue-100">
-                    <p className="font-semibold text-gray-900 text-sm mb-2">Highlights:</p>
-                    <ul className="space-y-1">
-                      {project.achievements.slice(0, 2).map((ach, idx) => (
-                        <li key={idx} className="text-gray-700 text-xs flex gap-2">
-                          <span className="text-blue-600">✓</span>
-                          <span>{ach}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                    {/* Achievements */}
+                    <motion.div 
+                      className="bg-white/50 backdrop-blur-sm rounded-xl p-4 mb-5 border border-white/50 group-hover:bg-blue-50/50 transition-colors"
+                      whileHover={{ boxShadow: "0 10px 30px rgba(59, 130, 246, 0.1)" }}
+                    >
+                      <p className="font-bold text-gray-900 text-sm mb-3">✨ Highlights:</p>
+                      <ul className="space-y-2">
+                        {project.achievements.slice(0, 2).map((ach, idx) => (
+                          <motion.li 
+                            key={idx} 
+                            className="text-gray-700 text-xs flex gap-3"
+                            initial={{ opacity: 0, x: -10 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: idx * 0.1 }}
+                          >
+                            <motion.span 
+                              className="text-blue-600 font-bold text-lg flex-shrink-0"
+                              animate={{ scale: [1, 1.2, 1] }}
+                              transition={{ duration: 2, repeat: Infinity, delay: idx * 0.2 }}
+                            >
+                              ★
+                            </motion.span>
+                            <span>{ach}</span>
+                          </motion.li>
+                        ))}
+                      </ul>
+                    </motion.div>
 
-                  {/* Tech Stack */}
-                  <div className="mb-4">
-                    <p className="text-xs font-semibold text-gray-600 mb-2">Tech Stack:</p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.slice(0, 4).map((tech, idx) => (
-                        <span key={idx} className="px-2 py-1 rounded text-xs bg-gray-100 text-gray-700 font-medium">
-                          {tech}
-                        </span>
-                      ))}
-                      {project.tech.length > 4 && (
-                        <span className="px-2 py-1 rounded text-xs bg-gray-100 text-gray-700 font-medium">
-                          +{project.tech.length - 4}
-                        </span>
-                      )}
+                    {/* Tech Stack */}
+                    <div className="mb-6">
+                      <p className="text-xs font-bold text-gray-700 mb-3">🛠️ Tech Stack:</p>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tech.slice(0, 4).map((tech, idx) => (
+                          <motion.span 
+                            key={idx} 
+                            className="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-blue-100 to-purple-100 text-gray-700 font-semibold border border-blue-200 hover:border-blue-400 transition-all"
+                            whileHover={{ scale: 1.1, y: -2 }}
+                          >
+                            {tech}
+                          </motion.span>
+                        ))}
+                        {project.tech.length > 4 && (
+                          <motion.span 
+                            className="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-pink-100 to-purple-100 text-gray-700 font-semibold"
+                            whileHover={{ scale: 1.1 }}
+                          >
+                            +{project.tech.length - 4}
+                          </motion.span>
+                        )}
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Link */}
-                  <motion.a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors text-sm font-semibold w-fit"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <ExternalLink size={16} />
-                    Learn More
-                  </motion.a>
-                </div>
+                    {/* Link */}
+                    <motion.a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-xl transition-all text-sm font-bold overflow-hidden group/btn relative"
+                      whileHover={{ scale: 1.08 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      {/* Animated shine effect */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0"
+                        animate={{ x: [-100, 100] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                      />
+                      <span className="relative flex items-center gap-2">
+                        <ExternalLink size={16} />
+                        Explore Project
+                      </span>
+                    </motion.a>
+                  </div>
+                </motion.div>
               </motion.div>
             );
           })}
